@@ -1,0 +1,8 @@
+// Funciones personalizadas
+@function calculate-rem($size) {
+    @return $size / $font-size-base * 1rem;
+}
+
+@function darken-color($color, $amount) {
+    @return darken($color, $amount);
+}
