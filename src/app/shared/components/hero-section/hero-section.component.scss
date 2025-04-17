@@ -10,6 +10,7 @@
     display: grid;
     grid-template-rows: 100px 1fr;
     color: #fff;
+    padding-top: 150px;
 
     ::before {
         content: "";
@@ -42,4 +43,26 @@
 
 .hero-section__title {
     font-size: 40px;
+}
+
+.hero-section__cta {
+    display: inline-block;
+    margin-top: 50px;
+    @include button-cta(
+        map.get($buttons-cta, "color"),
+        map.get($buttons-cta, "border"),
+        map.get($buttons-cta, "border-radius"),
+        map.get($buttons-cta, "padding"),
+        map.get($buttons-cta, "cursor"),
+        map.get($buttons-cta, "font-size"),
+        map.get($buttons-cta, "font-weight"),
+        map.get($buttons-cta, "text-transform"),
+        map.get($buttons-cta, "transition"),
+        map.get($buttons-cta, "background-color"),
+    );
+    transition: map.get($buttons-cta, "transition");
+
+    &:hover {
+        background-color: map.get($buttons-cta, "hover");
+    }
 }

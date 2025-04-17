@@ -10,8 +10,8 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
         space-between,
         center,
         10px);
-    margin: 50px auto;
-    padding: 30px 50px;
+    margin: 20px auto;
+    padding: 20px 50px;
     vertical-align: middle;
     width: 100%;
     max-width: map.get($container-layout, "max-width");
@@ -19,7 +19,9 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
     border-radius: 20px;
     position: fixed; // Fija el header en la parte superior
     top: 0; // Alinea el header en la parte superior
-    left: 0; // Alinea el header a la izquierda
+    // Alinea el header al centro
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
 }
 

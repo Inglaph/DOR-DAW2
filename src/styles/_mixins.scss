@@ -214,3 +214,23 @@
     box-shadow: 15px 15px 30px $color-shadow1,
         -15px -15px 30px $color-shadow2;
 }
+
+//---------------------------------
+//- mixin button-primary
+//---------------------------------
+/// @group buttons
+/// @description Establece un botón primario con propiedades de botón.
+/// @param {string} $color - Color del botón
+/// @param {string} $hover - Color del botón al pasar el mouse por encima
+/// @param {string} $active - Color del botón al hacer click
+/// @param {string} $visited - Color del botón después de haber sido visitado
+@mixin button-cta ($color, $border, $border-radius, $padding, $cursor, $font-size, $font-weight, $text-transform, $transition, $background-color) {
+    background: $background-color;
+    color: $color;
+    border: $border;
+    border-radius: $border-radius;
+    padding: $padding;
+    cursor: $cursor;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
