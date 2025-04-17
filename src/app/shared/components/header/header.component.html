@@ -1,1 +1,13 @@
-<p>header works!</p>
+<header class="header-container">
+    <!-- Sección del logo -->
+    <div class="logo-section">
+        <a [routerLink]="['/']" class="logo-link">
+            <img [src]="urlLogo" alt="Logo" class="logo-image">
+        </a>
+        <span class="logo-text">INGLAP</span>
+    </div>
+
+    <div class="nav">
+        <app-nav></app-nav>
+    </div>
+</header>

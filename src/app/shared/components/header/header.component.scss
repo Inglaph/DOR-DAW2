@@ -1,0 +1,99 @@
+@use 'stylesLap' as *;
+@use 'sass:map';
+
+$filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
+
+.header-container {
+    @include flexible-container(flex,
+        row,
+        nowrap,
+        space-between,
+        center,
+        10px);
+    margin: 50px auto;
+    padding: 30px 50px;
+    vertical-align: middle;
+    width: 100%;
+    max-width: map.get($container-layout, "max-width");
+    background-color: map.get($color-general, "header-background"); // Fondo blanco semitransparente
+    border-radius: 20px;
+    position: fixed; // Fija el header en la parte superior
+    top: 0; // Alinea el header en la parte superior
+    left: 0; // Alinea el header a la izquierda
+    z-index: 1000;
+}
+
+.logo-section {
+    $radius: 30px;
+    // outline: 0.5px solid rgb(255, 250, 250, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 25px;
+    position: relative;
+    transition: all 0.5s ease;
+    background-color: map.get($color-general, "color-prueba"); // Fondo blanco semitransparente
+    border-radius: $radius;
+    filter: $filter-shadow; // Filtro de sombra
+
+    // Efecto de hover
+    &:hover {
+        transform: scale(1.07);
+        transition: all 0.5s ease;
+        cursor: pointer;
+        box-shadow: 0 0 8px rgba(37, 198, 102, 0.6);
+
+        .logo-image {
+            filter: drop-shadow(0 0 8px rgba(198, 195, 37, 0.6));
+        }
+
+        .logo-text {
+            transition: all 0.5s ease;
+            color: lighten(map.get($color-general, "primary"), 20%);
+        }
+    }
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg,
+                map.get($color-general, "primario") 0%,
+                map.get($color-general, "secundario") 100%);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+    }
+}
+
+.logo-image {
+    max-width: 150px;
+    height: auto;
+    transition: filter 0.3s ease;
+    filter: drop-shadow(0 0 5px map.get($color-general, "primary"));
+}
+
+.logo-text {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); // Sombra sutil para profundidad
+}
+
+.nav {
+    // outline: 1px solid red;
+    filter: $filter-shadow;
+    display: flex;
+}

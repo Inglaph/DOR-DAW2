@@ -1,4 +1,6 @@
 @use 'stylesLap' as *; // Importo los estilos de stylesLap
+@use 'sass:map';
+
 
 .container {
     @include responsive-container(
@@ -14,5 +16,5 @@
         100%, // width-desktop
         100%, // height-desktop
     );
-    background-color: map-get($color-general, "primario");
+    background-color: map.get($color-general, "primario");
 }

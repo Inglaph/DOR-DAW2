@@ -1,3 +1,6 @@
+
+@use '_variables' as *;
+@use 'sass:map';
 //---------------------------------
 //- mixin flexible-container
 //---------------------------------
@@ -11,24 +14,24 @@
 /// @param {number} $gap - Espacio entre los elementos flexibles
 /// @param {number} $padding - Espacio interno (padding) por defecto 0
 /// @param {number} $margin - Espacio externo (margin) por defecto 0
-@mixin flexible-container ($dis,
-    $direccion,
-    $corte,
-    $just,
-    $align,
-    $gap,
-    $padding: 20px,
+@mixin flexible-container ($dis, //display
+    $direccion, //direccion
+    $corte, //corte
+    $just, //justificacion
+    $align, //alineacion
+    $gap, //espacio
+    $padding: 20px, //padding
+
     $margin: 20px) {
     display: $dis;
     flex-flow: $direccion $corte;
     justify-content: $just;
     align-items: $align;
     gap: $gap;
-    width: 100%;
+    width: map.get($container-layout, "width");
     padding: $padding;
     margin-top: $margin;
     margin-bottom: $margin;
-
 
     @media (max-width: 768px) {
         //tablet
@@ -43,7 +46,7 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
-        width: 100%;
+        width: map.get($container-layout, "width-mobile");
         padding: 10px;
     }
 }
@@ -125,7 +128,7 @@
 //- mixin responsive-container
 //---------------------------------
 /// @group responsive
-/// @description Establece un contenedor responsive con propiedades de responsive.
+/// @description Establece un contenedor responsive
 /// @param {string} $margin - Margen del contenedor
 /// @param {string} $padding - Padding del contenedor
 /// @param {string} $width - Ancho del contenedor

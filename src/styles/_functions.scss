@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 /// Función que me devuelve el color de fondo de las columnas dependiendo de si es par o impar
 /// @parameter {integer} $col-number Número de la columna
 /// @return {color}
@@ -12,18 +14,13 @@
     }
 }
 
-
 /// Función que devuelve la anchura correspondiente al elemento de la maquetación
 /// @parameter {integer} $i - Número de casillas en el alcho de la fila que va a ocupar
 /// @return {integer} - El porcentaje (sin el símbolo %, del ancho que le corresponde al elemento
 /// @group layout
 @function anchura_col($i) {
-    @return (100 / $num_elementos)*$i ;
-  }
-
-
-
-
+    @return (100 / $num_elementos)*$i;
+}
 
 // Funciones personalizadas
 @function calculate-rem($size) {
@@ -33,5 +30,3 @@
 @function darken-color($color, $amount) {
     @return darken($color, $amount);
 }
-
-

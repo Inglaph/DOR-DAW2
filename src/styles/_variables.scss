@@ -1,6 +1,4 @@
-// Importo la fuente de google fonts
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
-
+@use 'sass:map';
 
 //---------------------------------
 //- Variables globales
@@ -8,8 +6,13 @@
 /// @group general
 /// @description Color primario
 $color-general: (
-    "primario": #007bff,
-    "secundario": #6c757d,
+    "primary": #ffd500,
+    "secondary": #c2d11c,
+    "dark": #121760,
+    "light": #ffffff,
+    "gray": #a7a0a0,
+    "header-background": rgba(21, 20, 20, 0.26),
+    "color-prueba": #030814,
 );
 
 /// @group general
@@ -17,6 +20,7 @@ $color-general: (
 /// @param {string} $principal - Familia de fuentes principal
 /// @param {string} $secundaria - Familia de fuentes secundaria
 /// @param {string} $tamanio - Tamaño de la fuente  
+/// @param {string} $color-texto - Color de la fuente
 $fonts-general: (
     "principal": 'Poppins',
     "secundaria": 'Arial',
@@ -71,11 +75,12 @@ $table-columns-rows: (
 $container-layout : ("padding": 100px 0,
     "margin": 20px,
     "width": 100%, // Ancho total de la página
-    "max-width": 1200px, // Ancho máximo del contenedor
+    "max-width": 1600px, // Ancho máximo del contenedor
     "width-mobile": 100%,
     "width-tablet": 100%,
     "width-desktop": 1200px,
     "width-desktop-large": 1400px,
+    "margin-top": 300px,
 );
 
 
@@ -126,7 +131,7 @@ html {
 /// @group general
 /// @description Estilos del body
 body {
-    font-family: map-get($fonts-general, "principal");
-    font-size: map-get($fonts-general, "tamanio");
-    color: map-get($fonts-general, "color-texto");
+    font-family: map.get($fonts-general, "principal");
+    font-size: map.get($fonts-general, "tamanio");
+    color: map.get($fonts-general, "color-texto");
 }

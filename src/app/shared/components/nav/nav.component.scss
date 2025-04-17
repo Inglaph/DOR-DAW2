@@ -1,0 +1,40 @@
+@use 'stylesLap' as *;
+@use 'sass:map';
+
+.nav-container {
+    @include responsive-container(
+        0 auto, // margin
+        20px 50px, // padding
+        100%, // width
+        100%, // max-width
+        100%, // height
+
+    );
+    display: flex;
+    background-color: map.get($color-general, "color-prueba");
+    border-radius: 20px;
+
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+
+    li {
+        list-style: none;
+        font-size: 2.2rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+
+    }
+
+    li:hover {
+        color: map.get($color-general, "primary");
+        transition: all 0.3s ease;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
