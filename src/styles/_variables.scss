@@ -1,9 +1,132 @@
-// Variables globales
-/// @group colors
-$primary-color: #007bff;
-/// @group colors
-$secondary-color: #6c757d;
-/// @group fonts
-$font-family: 'Arial', sans-serif;
-/// @group fonts
-$font-size-base: 16px;
+// Importo la fuente de google fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+
+//---------------------------------
+//- Variables globales
+//---------------------------------
+/// @group general
+/// @description Color primario
+$color-general: (
+    "primario": #007bff,
+    "secundario": #6c757d,
+);
+
+/// @group general
+/// @description Familia de fuentes y tamaño de la fuente
+/// @param {string} $principal - Familia de fuentes principal
+/// @param {string} $secundaria - Familia de fuentes secundaria
+/// @param {string} $tamanio - Tamaño de la fuente  
+$fonts-general: (
+    "principal": 'Poppins',
+    "secundaria": 'Arial',
+    "tamanio": 1.6rem,
+    "color-texto": #333,
+);
+
+
+
+
+
+//---------------------------------
+//- Tablas
+//---------------------------------
+/// @group tablas
+/// @description Colores de fondo de las columnas o filas de la tabla
+$colores-interlineado-tabla : ("par": #fccccc,
+    "impar": #d9cece,
+);
+
+/// @group tablas
+/// @description Interlineado de las columnas o filas de las tablas en px 
+$interlineado-tabla : ("par": 1.5,
+    "impar": 1.5,
+);
+
+/// @group tablas
+/// @description Número de columnas de la tabla
+$table-columns-rows: (
+    "columnas": 12,
+    "filas": 12,
+);
+
+
+//---------------------------------
+//- Layout
+//---------------------------------
+/// @group layout
+/// @description padding del container
+/// @param {string} $padding - padding del container
+/// @param {string} $margin - margin del container
+/// @param {string} $width - ancho del container
+/// @param {string} $max-width - ancho máximo del contenedor
+/// @param {string} $width-mobile - ancho del container en mobile
+/// @param {string} $width-tablet - ancho del container en tablet
+/// @param {string} $width-desktop - ancho del container en desktop
+/// @param {string} $width-desktop-large - ancho del container en desktop grande
+/// @param {string} $width-container-mobile - ancho del container en mobile
+/// @param {string} $width-container-tablet - ancho del container en tablet
+/// @param {string} $width-container-desktop - ancho del container en desktop
+/// @param {string} $width-container-desktop-large - ancho del container en desktop grande
+$container-layout : ("padding": 100px 0,
+    "margin": 20px,
+    "width": 100%, // Ancho total de la página
+    "max-width": 1200px, // Ancho máximo del contenedor
+    "width-mobile": 100%,
+    "width-tablet": 100%,
+    "width-desktop": 1200px,
+    "width-desktop-large": 1400px,
+);
+
+
+//---------------------------------
+//- Botones
+//---------------------------------
+/// @group botones
+/// @description Color de fondo del botón       
+/// @param {string} $primario - Color primario
+/// @param {string} $secundario - Color secundario
+$buttons-color: (
+    "primario": #007bff,
+    "secundario": #6c757d,
+    "cta": #fff,
+    "cta-hover": #0056b3,
+);
+
+
+
+//---------------------------------
+//- links
+//---------------------------------
+/// @group links
+/// @description Color de fondo del link
+$color-link: #007bff;
+
+
+
+
+
+
+//---------------------------------
+//- Reset
+//---------------------------------
+/// @group general
+/// @description reset inicial
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+/// @group general
+/// @description Estilos del body
+body {
+    font-family: map-get($fonts-general, "principal");
+    font-size: map-get($fonts-general, "tamanio");
+    color: map-get($fonts-general, "color-texto");
+}

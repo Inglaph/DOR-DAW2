@@ -34,6 +34,10 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent)
     },
     {
+        path: 'pruebas',
+        loadComponent: () => import('./pages/pruebas/pruebas.component').then(m => m.PruebasComponent)
+    },
+    {
         path: '**',
         redirectTo: '', // Redirige a la página de inicio si la ruta no existe
         pathMatch: 'full'
