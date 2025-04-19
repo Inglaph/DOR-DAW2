@@ -1,6 +1,6 @@
-
 @use '_variables' as *;
 @use 'sass:map';
+@use 'sass:color';
 //---------------------------------
 //- mixin flexible-container
 //---------------------------------
@@ -14,15 +14,17 @@
 /// @param {number} $gap - Espacio entre los elementos flexibles
 /// @param {number} $padding - Espacio interno (padding) por defecto 0
 /// @param {number} $margin - Espacio externo (margin) por defecto 0
-@mixin flexible-container ($dis, //display
-    $direccion, //direccion
+
+@mixin flexible-container (
+    $dis, //display
+    $direccion, //direccion 
     $corte, //corte
     $just, //justificacion
     $align, //alineacion
     $gap, //espacio
     $padding: 20px, //padding
-
-    $margin: 20px) {
+    $margin: 20px //margin
+    ) {
     display: $dis;
     flex-flow: $direccion $corte;
     justify-content: $just;
@@ -61,6 +63,8 @@
 /// @param {string} $height - Alto del elemento
 /// @param {number} $padding - Espacio interno (padding) por defecto 0
 /// @param {number} $margin - Espacio externo (margin) por defecto 0
+/// @example
+/// @include flex-item(100%, 100%, 0, 0);
 @mixin flex-item ($width, $height, $padding: 0, $margin: 0) {
     display: block;
     width: $width;
@@ -78,6 +82,7 @@
 /// @description Establece un contenedor de grid con propiedades de grid.
 /// @param {number} $columnas - Número de columnas
 /// @param {string} $gap - Espacio entre los elementos de la grid
+/// 
 @mixin grid-container ($columnas, $gap) {
     display: grid;
     grid-template-columns: repeat($columnas, 1fr);
@@ -208,11 +213,16 @@
 /// @param {color} $color - Color del elemento
 /// @param {color} $color-shadow1 - Color del sombra 1
 /// @param {color} $color-shadow2 - Color del sombra 2
-@mixin neo ($radius, $eje, $color, $color-shadow1: color.adjust($color, $lightness: -20%), $color-shadow2: lighten($color, 20%)) {
-    border-radius: 20px;
+@mixin neo ($radius, $eje, $color, $color-shadow1: color.adjust($color, $lightness: -20%), $color-shadow2: color.adjust($color, $lightness: 20%)) {
+    border-radius: $radius;
     background: $color;
-    box-shadow: 15px 15px 30px $color-shadow1,
-        -15px -15px 30px $color-shadow2;
+    box-shadow:
+        if($eje =='y',
+            0 -5px 15px $color-shadow1,
+            5px 0 15px $color-shadow1 ),
+        if($eje =='y',
+            0 5px 15px $color-shadow2,
+            -5px 0 15px $color-shadow2 );
 }
 
 //---------------------------------
@@ -234,3 +244,56 @@
     font-size: $font-size;
     font-weight: $font-weight;
 }
+
+//---------------------------------
+//- mixin gradient-line
+//---------------------------------
+/// @group layout
+/// @description Establece un elemento gradient-line con propiedades de gradient-line.
+/// @param {color} $color1 - Color del gradient-line 1
+/// @param {color} $color2 - Color del gradient-line 2
+/// @param {number} $height - Alto del gradient-line
+/// @param {number} $offset - Desplazamiento del gradient-line
+/// @param {number} $width - Ancho del gradient-line
+/// @example
+/// @include gradient-line(map.get($color-general, "primary"), map.get($color-general, "secondary"));
+@mixin gradient-line ($color1, $color2, $height: 2px, $offset: -5px, $width: 100%) {
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: $offset;
+        left: 0;
+        width: $width;
+        height: $height;
+        background: linear-gradient(90deg,
+                $color1 0%,
+                $color2 100%);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+}
+
+//---------------------------------
+//- mixin text-style
+//---------------------------------
+/// @group text
+/// @description Establece un estilo de texto con propiedades de texto.
+/// @param {number} $font-size - Tamaño de la fuente
+/// @param {number} $font-weight - Peso de la fuente
+/// @param {color} $color - Color del texto
+/// @param {string} $text-align - Alineación del texto
+/// @param {string} $text-transform - Transformación del texto
+/// @param {string} $text-decoration - Decoración del texto
+/// @param {string} $text-shadow - Sombra del texto
+/// @param {string} $text-transform - Transformación del texto
+/// @example
+/// @include text-style(1rem, 400, map.get($color-general, "primary"), center, none, none, none, none);
+@mixin text-style ($font-size, $font-weight, $color, $text-align, $text-transform, $text-decoration, $text-shadow) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    text-align: $text-align;
+    text-transform: $text-transform;
+    text-decoration: $text-decoration;
+    text-shadow: $text-shadow;
+}   

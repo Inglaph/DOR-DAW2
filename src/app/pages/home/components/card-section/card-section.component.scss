@@ -1,4 +1,19 @@
+@use 'stylesLap' as *;
+@use 'sass:map';
+
 /* about ************************/
+.title-cards {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.icon-fotovoltaica {
+    width: 100px;
+    height: 100px;
+}
+
 .about {
     text-align: center;
 }
@@ -28,4 +43,108 @@
 
 .about__icon {
     width: 40px;
+}
+
+/* Estilos base para todas las cards */
+.project-card {
+    background-color: map.get($color-general, "light");
+    max-width: 450px;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin: 20px;
+    @include neo(20px, y, map.get($color-general, "light"));
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card .icon-container {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+}
+
+.project-card svg {
+    width: 48px;
+    height: 48px;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: map.get($color-general, "dark");
+}
+
+.project-card p {
+    font-size: 1.6rem;
+    color: map.get($color-general, "gray");
+    line-height: 1.6;
+}
+
+/* Estilos específicos para cada card */
+.card-fotovoltaica .icon-container {
+    background-color: lighten(map.get($color-general, "primary"), 30%);
+}
+
+.card-fotovoltaica svg {
+    fill: map.get($color-general, "primary");
+}
+
+.card-desarrollo-web .icon-container {
+    background-color: lighten(map.get($color-general, "secondary"), 30%);
+}
+
+.card-desarrollo-web svg {
+    fill: map.get($color-general, "secondary");
+}
+
+.card-redes-vapor .icon-container {
+    background-color: lighten(map.get($color-general, "dark"), 30%);
+}
+
+.card-redes-vapor svg {
+    fill: map.get($color-general, "dark");
+}
+
+/* Contenedor de las cards */
+.cards-container {
+    @include flexible-container(flex,
+        row,
+        wrap,
+        center,
+        center,
+        20px,
+        50px 20px,
+        0 auto);
+    max-width: map.get($container-layout, "max-width");
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+        max-width: 400px;
+    }
 }

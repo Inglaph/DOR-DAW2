@@ -1,0 +1,13 @@
+<!-- <h2 class="title-aplications">{{ title }}</h2> -->
+<section class="container" *ngFor="let application of applications">
+    <section class="aplication-section">
+        <div class="text-container">
+            <h2 class="title-aplications">{{ application.title }}</h2>
+            <p class="description-aplications">{{ application.description }}</p>
+            <button class="button-aplications">{{ application.buttonText }}</button>
+        </div>
+        <section class="aplications-image">
+            <img [src]="application.image" [alt]="application.title">
+        </section>
+    </section>
+</section>

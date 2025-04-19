@@ -6,8 +6,8 @@
 /// @group general
 /// @description Color primario
 $color-general: (
-    "primary": #ffd500,
-    "secondary": #c2d11c,
+    "primary": #007bff,
+    "secondary": #6c757d,
     "dark": #121760,
     "light": #ffffff,
     "gray": #a7a0a0,
@@ -112,7 +112,7 @@ $buttons-cta: (
     "text-transform": uppercase,
     "transition": all 0.3s ease,
     "background-color": #007bff,
-    
+
 );
 
 

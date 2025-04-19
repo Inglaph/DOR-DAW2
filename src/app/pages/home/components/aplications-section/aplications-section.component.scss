@@ -1,0 +1,57 @@
+
+@use 'stylesLap' as *;
+@use 'sass:map';
+
+.container {
+    
+}
+.title-aplications {
+   text-align: center;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   font-size: 3rem;
+   font-weight: 600;
+   color: map.get($color-general, "light");
+}
+
+.text-container {
+    @include flexible-container(flex, column, nowrap, center, center, 20px, 20px);
+    width: 50%;
+}
+    .container {
+    @include responsive-container(
+        0 auto, // margin
+        20px 50px, // padding
+        100%, // width
+        100%, // max-width
+        100%, // height
+    );
+}
+
+.description-aplications {
+    @include text-style(1.8rem, 400, map.get($color-general, "light"), center, none, none, none);
+}
+
+.button-aplications {
+    @include text-style(1.8rem, 400, map.get($color-general, "light"), center, none, none, none);
+    background-color: map.get($color-general, "primary");
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: map.get($color-general, "secondary");
+    }
+}
+
+.aplication-section {
+    @include flexible-container(flex, row, nowrap, space-around, center, 20px, 20px);
+}
+
+.aplications-image {
+    img {
+        width: 500px;
+        height: auto;
+        border-radius: 20px;
+    }
+}

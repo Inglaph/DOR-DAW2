@@ -1,0 +1,83 @@
+@use 'stylesLap' as *;
+@use 'sass:map';
+@use 'sass:color';
+
+.social-icons {
+    @include flexible-container(flex,
+        row,
+        wrap,
+        center,
+        center,
+        2rem,
+        2rem,
+        0 auto);
+    max-width: map.get($container-layout, "max-width");
+    padding: 2rem;
+}
+
+.social-icon {
+    @include neo(50%, y, color.adjust(map.get($color-general, "dark"), $lightness: -5%));
+    background-color: color.adjust(map.get($color-general, "dark"), $lightness: -5%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at center,
+                color.adjust(map.get($color-general, "dark"), $lightness: 5%),
+                color.adjust(map.get($color-general, "dark"), $lightness: -5%));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        z-index: 1;
+        filter: brightness(0) saturate(100%) invert(100%);
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+
+        &::before {
+            opacity: 1;
+        }
+
+        img {
+            filter: brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(500%) hue-rotate(190deg) brightness(100%) contrast(100%);
+        }
+    }
+}
+
+// Responsive: 2x2 grid en móvil
+@media (max-width: 768px) {
+    .social-icons {
+        @include flexible-container(grid,
+            row,
+            wrap,
+            center,
+            center,
+            2rem,
+            2rem,
+            0 auto);
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 200px;
+    }
+
+    .social-icon {
+        margin: 0 auto;
+    }
+}

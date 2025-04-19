@@ -1,10 +1,10 @@
-<section class="card-section container">
-    <article class="about__icons">
-        <img src="./img2/shapes.svg" class="about__icon" alt="">
-        <h3 class="about__title">CSS Layouts</h3>
-        <p class="about__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nihil
-            nam nostrum, molestiae mollitia rerum optio praesentium a. Perferendis fuga totam labore
-            voluptatem odit adipisci nulla illum, illo a vel.</p>
-    </article>
-</section>  
-
+<h2 class="title-cards">{{ title }}</h2>
+<section class="cards-container">
+    <div class="project-card card-fotovoltaica" *ngFor="let article of articles">
+        <div class="icon-container">
+            <img [src]="article.image" alt="Energía Fotovoltaica">
+        </div>
+        <h3>{{ article.title }}</h3>
+        <p>{{ article.description }}</p>
+    </div>
+</section>

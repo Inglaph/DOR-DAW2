@@ -1,0 +1,129 @@
+@use 'stylesLap' as *;
+@use 'sass:map';
+@use 'sass:color';
+
+.footer {
+    background: linear-gradient(to bottom,
+            color.adjust(map.get($color-general, "dark"), $lightness: -10%),
+            color.adjust(map.get($color-general, "dark"), $lightness: -15%));
+    color: map.get($color-general, "light");
+    padding: 4rem 2rem;
+    position: relative;
+    width: map.get($container-layout, "width");
+    padding: 0 20rem;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg,
+                transparent,
+                map.get($color-general, "primary"),
+                transparent);
+    }
+}
+
+.footer-content {
+    @include flexible-container(flex,
+        row,
+        wrap,
+        space-between,
+        flex-start,
+        4rem,
+        2rem,
+        0 auto);
+    max-width: map.get($container-layout, "max-width");
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 300px;
+    width: 33%;
+    max-width: 30%;
+    margin: 0 auto;
+
+    h3 {
+        color: map.get($color-general, "primary");
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    p {
+        line-height: 1.6;
+        color: map.get($color-general, "light");
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 1rem;
+
+            a {
+                color: map.get($color-general, "light");
+                text-decoration: none;
+                transition: color 0.3s ease;
+                font-size: 1.4rem;
+
+                &:hover {
+                    color: map.get($color-general, "primary");
+                }
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid color.adjust(map.get($color-general, "dark"), $lightness: 10%);
+    width: 100%;
+
+    p {
+        color: map.get($color-general, "light");
+        font-size: 1.2rem;
+        opacity: 0.8;
+        margin: 0px auto 10px auto;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        @include flexible-container(flex,
+            column,
+            nowrap,
+            center,
+            center,
+            3rem,
+            1rem,
+            0 auto);
+    }
+
+    .footer-section {
+        text-align: center;
+        max-width: 100%;
+    }
+}

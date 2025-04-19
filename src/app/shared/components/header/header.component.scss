@@ -62,20 +62,7 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
     text-decoration: none;
     position: relative;
 
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(90deg,
-                map.get($color-general, "primario") 0%,
-                map.get($color-general, "secundario") 100%);
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
-    }
-
+    // @include gradient-line(map.get($color-general, "primary"), map.get($color-general, "secondary"));
     &:hover::after {
         transform: scaleX(1);
     }
@@ -84,8 +71,8 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
 .logo-image {
     max-width: 150px;
     height: auto;
-    transition: filter 0.3s ease;
-    filter: drop-shadow(0 0 5px map.get($color-general, "primary"));
+    transition: filter 0.3s ease; // Transición suave para el efecto de hover
+    filter: drop-shadow(0 0 5px map.get($color-general, "primary")); // Sombra primaria
 }
 
 .logo-text {

@@ -1,0 +1,17 @@
+@use 'sass:map';
+@use 'stylesLap' as *;
+
+.container {
+    @include responsive-container(
+        0 auto, // margin
+        20px 50px, // padding
+        100%, // width
+        100%, // max-width
+        100%, // height
+    );
+}
+
+.aplications-section {
+    background-color: #000;
+
+}
