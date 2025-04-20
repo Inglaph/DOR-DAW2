@@ -27,7 +27,7 @@
     }
 
     @include movil(map.get($breakpoints-layout, "tablet")) {
-        padding-top: 150px;
+        padding-top: 0%;
     }
 
 

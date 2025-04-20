@@ -7,6 +7,10 @@
     width: 90%;
     margin: 0 auto;
     margin-top: map.get($container-layout, "margin-top")- 100px;
+
+    @include movil (map.get($breakpoints-layout, "tablet")) {
+        margin-top: 0px;
+    }
 }
 
 .contact-form {

@@ -93,6 +93,8 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
         left: 0;
         right: 0;
         margin: 20px auto; // Añadido margen para separación
+        display: flex;
+        flex-direction: row-reverse;
 
         .menu-toggle {
             display: block;
@@ -119,6 +121,7 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
                 transform: translateY(0);
                 opacity: 1;
                 visibility: visible;
+                flex-direction: row-reverse;
             }
 
             li {
@@ -145,12 +148,14 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
 
     // Mobile styles using mixin
     @include movil {
-        padding: 10px 20px;
         position: relative; // Cambiado de fixed a relative
         top: 0; // Eliminado el posicionamiento fijo
         left: 0;
         right: 0;
         margin: 20px auto; // Añadido margen para separación
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
 
         .header-brand a {
             font-size: 2rem;

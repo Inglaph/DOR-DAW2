@@ -44,7 +44,8 @@ $color-gradient: (
         border: none;
         cursor: pointer;
         padding: 10px;
-        margin-left: auto;
+        position: relative;
+        z-index: 2000;
 
         .menu-icon {
             width: 24px;
@@ -67,7 +68,7 @@ $color-gradient: (
         padding: 0;
         margin: 0;
         list-style: none;
-        transition: transform 0.3s ease;
+        transition: all 0.3s ease;
 
         li {
             list-style: none;
@@ -75,6 +76,7 @@ $color-gradient: (
             font-weight: 500;
             letter-spacing: 0.1em;
             transition: all 0.3s ease;
+            min-width: 100px;
 
             a {
                 text-decoration: none;
@@ -94,37 +96,44 @@ $color-gradient: (
     // Tablet styles
     @media (max-width: map.get($breakpoints-layout, "tablet")) {
         padding: 15px 30px;
+        min-width: 30px;
 
         .menu-toggle {
             display: block;
         }
 
         ul {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
+            position: fixed;
+            top: 0;
+            left: 35%;
+            min-width: 300px;
+            // height: 100vh;
             background: linear-gradient(to bottom,
                     color.adjust(map.get($color-general, "dark"), $lightness: -10%),
                     color.adjust(map.get($color-general, "dark"), $lightness: -15%));
+            display: flex;
             flex-direction: column;
-            gap: 0;
-            padding: 20px;
-            border-radius: 0 0 20px 20px;
-            transform: translateY(-100%);
+            align-items: flex-start;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px;
+            transform: translateX(100%);
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
+            z-index: 1500;
 
             &.active {
-                transform: translateY(0);
+                transform: translateX(0);
                 opacity: 1;
                 visibility: visible;
+                min-width: 300px;
             }
 
             li {
                 width: 100%;
-                text-align: center;
+                text-align: left;
+                padding: 15px 30px;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
                 &:last-child {
@@ -132,28 +141,50 @@ $color-gradient: (
                 }
 
                 a {
-                    padding: 15px;
+                    padding: 15px 0;
                     width: 100%;
+                    font-size: 2.2rem;
+                    text-align: left;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0.1em;
 
                     &:hover {
-                        background: color.adjust(map.get($color-general, "dark"), $lightness: -8%);
-                        transform: none;
+                        background: none;
+                        color: map.get($color-general, "primary");
+                        transform: translateX(20px);
                     }
                 }
             }
         }
     }
 
-    // Mobile styles using mixin
+    // Estilos para el menu en movil
     @include movil {
         padding: 10px 20px;
 
-        .nav-brand a {
-            font-size: 2rem;
-        }
-
         ul {
-            padding: 15px;
+            left: 0;
+            width: 100%;
+            padding: 30px;
+            align-items: center;
+
+            li {
+                width: 100%;
+                text-align: center;
+                padding: 15px 20px;
+
+                a {
+                    font-size: 2rem;
+                    text-align: center;
+                    justify-content: center;
+
+                    &:hover {
+                        transform: translateX(0);
+                        color: map.get($color-general, "primary");
+                    }
+                }
+            }
         }
     }
 }

@@ -4,6 +4,9 @@
 
 .main-about {
     margin-top: map.get($container-layout, "margin-top") - 120px;
+    @include movil (map.get($breakpoints-layout, "tablet")) {
+        margin-top: 0px;
+    }
 }
 
 .about-container {

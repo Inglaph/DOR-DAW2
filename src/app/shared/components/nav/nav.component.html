@@ -1,11 +1,6 @@
 <nav class="nav-container">
-    
-    <div *ngIf="!isDesktop" class="nav-brand">
-        <a routerLink="/" (click)="closeMenu()">INGLAP</a>
-    </div>
-
     <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen" aria-label="Toggle menu">
-        <img src="assets/icons/menu-hamburger.svg" alt="Menu" class="menu-icon">
+        <img src="assets/images/header/menu.svg" alt="Menu" class="menu-icon">
     </button>
 
     <ul [class.active]="isMenuOpen">
