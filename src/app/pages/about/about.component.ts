@@ -14,7 +14,7 @@ export class AboutComponent {
   profile = {
     name: 'Luis Alberto Posada Hoyos',
     role: 'CEO & Fundador de INGLAP',
-    image: 'assets/images/profile/profile-photo.jpg',
+    image: '../../../assets/images/about/foto-perfil2.png',
     description: 'Ingeniero Mecánico con especialización en Gestión de Proyectos. Apasionado por la innovación tecnológica y el desarrollo sostenible. Líder en proyectos de energía renovable y desarrollo web.',
     skills: [
       {

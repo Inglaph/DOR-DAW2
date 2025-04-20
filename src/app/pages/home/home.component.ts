@@ -4,7 +4,8 @@ import { HeroSectionComponent } from '../../shared/components/hero-section/hero-
 import { FooterComponent } from '../../shared/components/footer/footer.component';
 import { CardSectionComponent } from "./components/card-section/card-section.component";
 import { AplicationsSectionComponent } from "./components/aplications-section/aplications-section.component";
-import { ContactFormComponent } from "../../shared/components/contact-form/contact-form.component";
+import { ContactFormComponent } from '../../shared/components/contact-form/contact-form.component';
+import { ContactCardComponent } from '../../shared/components/contact-card/contact-card.component';
 
 @Component({
   selector: 'app-home',
@@ -15,8 +16,9 @@ import { ContactFormComponent } from "../../shared/components/contact-form/conta
     FooterComponent,
     CardSectionComponent,
     AplicationsSectionComponent,
-    ContactFormComponent
-],
+    ContactFormComponent,
+    ContactCardComponent
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

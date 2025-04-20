@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -30,7 +30,10 @@ class NavigationItem {
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent {
+export class NavComponent implements OnInit {
+  isMenuOpen = false;
+  isDesktop = false;
+
   /**
    * Lista de enlaces de navegación.
    * @Input links - Un array de objetos NavigationItem que representan los enlaces.
@@ -41,4 +44,24 @@ export class NavComponent {
     new NavigationItem('Sobre mi', '/about'),
     new NavigationItem('Contacto', '/contact'),
   ];
+
+  constructor() { }
+
+  ngOnInit(): void {
+    this.checkScreenSize();
+    window.addEventListener('resize', this.checkScreenSize.bind(this)); // Escucha el evento de resize y llama a checkScreenSize
+  }  
+
+  checkScreenSize() { // Verifica el tamaño de la pantalla
+    const width = window.innerWidth;
+    this.isDesktop = width >= 1024; 
+  }
+
+  toggleMenu(): void { // Cambia el estado del menú
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void { // Cierra el menú
+    this.isMenuOpen = false;
+  }
 }

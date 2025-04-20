@@ -1,0 +1,12 @@
+<div class="contact-card">
+    <div class="cards-article">
+        <article class="contact-card-article-item" *ngFor="let contact of contact">
+            <a [href]="contact.link" target="_blank">
+                <img class="contact-card-article-item-icon" [src]="contact.iconUrl" [alt]="contact.title">
+                <h3>{{ contact.title }}</h3>
+                <p>{{ contact.description }}</p>
+            </a>
+        </article>
+    </div>
+</div>
+

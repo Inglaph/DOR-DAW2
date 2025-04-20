@@ -26,6 +26,11 @@
         z-index: -1;
     }
 
+    @include movil(map.get($breakpoints-layout, "tablet")) {
+        padding-top: 150px;
+    }
+
+
 }
 
 .hero-section__content {
@@ -48,8 +53,7 @@
 .hero-section__cta {
     display: inline-block;
     margin-top: 50px;
-    @include button-cta(
-        map.get($buttons-cta, "color"),
+    @include button-cta(map.get($buttons-cta, "color"),
         map.get($buttons-cta, "border"),
         map.get($buttons-cta, "border-radius"),
         map.get($buttons-cta, "padding"),

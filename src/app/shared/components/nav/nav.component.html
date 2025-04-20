@@ -1,7 +1,18 @@
 <nav class="nav-container">
-    <ul>
-        <li *ngFor="let link of links">
-            <a [routerLink]="link.url">{{ link.label }}</a>
+    
+    <div *ngIf="!isDesktop" class="nav-brand">
+        <a routerLink="/" (click)="closeMenu()">INGLAP</a>
+    </div>
+
+    <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen" aria-label="Toggle menu">
+        <img src="assets/icons/menu-hamburger.svg" alt="Menu" class="menu-icon">
+    </button>
+
+    <ul [class.active]="isMenuOpen">
+        @for (item of links; track item) {
+        <li>
+            <a [routerLink]="item.url" (click)="closeMenu()">{{ item.label }}</a>
         </li>
+        }
     </ul>
 </nav>

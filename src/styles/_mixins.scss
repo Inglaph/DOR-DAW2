@@ -297,3 +297,19 @@
     text-decoration: $text-decoration;
     text-shadow: $text-shadow;
 }   
+
+
+//---------------------------------
+//- mixin movil
+//---------------------------------
+/// @group layout
+/// @description un media screen para movil, con el ancho de 480px por defecto
+/// @param {number} $width - Ancho del contenedor
+/// @example
+/// @include movil(100%);
+@mixin movil ($width: 480px) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+

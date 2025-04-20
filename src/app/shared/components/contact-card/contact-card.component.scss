@@ -1,0 +1,46 @@
+@use 'stylesLap.scss' as *;
+@use 'sass:color';
+@use 'sass:map';
+
+.contact-card {
+    padding: 20px;
+    border-radius: 10px;
+    // outline: 1px solid map.get($color-general, 'primary');
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .cards-article {
+        // outline: 1px solid red;
+        max-width: map.get($container-layout, 'width-desktop-large');
+        margin: 0 auto;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @include flexible-container(flex, row, nowrap, space-around, center, 20px, 20px);
+    }
+
+    .contact-card-article-item {
+        // outline: 1px solid blue;
+        width: 25%;
+        min-width: 300px;
+        // coloco sombra a la tarjeta
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+        @include flexible-container(flex, column, nowrap, space-around, center, 20px, 20px);
+
+        a {
+            text-decoration: none;
+            color: map.get($color-general, 'primary');
+            text-align: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    }
+
+    .contact-card-article-item-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+}

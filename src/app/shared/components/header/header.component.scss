@@ -5,25 +5,188 @@
 $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
 
 .header-container {
-    @include flexible-container(flex,
-        row,
-        nowrap,
-        space-between,
-        center,
-        10px);
-    margin: 20px auto;
-    padding: 20px 50px;
-    vertical-align: middle;
-    width: 100%;
-    max-width: map.get($container-layout, "max-width");
-    background: map.get($color-general, "header-background"); // Fondo blanco semitransparente
+    @include responsive-container(0 auto,
+        20px 50px,
+        100%,
+        map.get($container-layout, "max-width"),
+        auto);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: map.get($color-general, "header-background");
     border-radius: 20px;
-    position: fixed; // Fija el header en la parte superior
-    top: 0; // Alinea el header en la parte superior
-    // Alinea el header al centro
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     z-index: 1000;
+
+    .header-brand {
+        a {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: map.get($color-general, "light");
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: map.get($color-general, "primary");
+            }
+        }
+    }
+
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        margin-left: auto;
+
+        .menu-icon {
+            width: 24px;
+            height: 24px;
+            color: map.get($color-general, "light");
+            transition: transform 0.3s ease;
+        }
+
+        &.active .menu-icon {
+            transform: rotate(90deg);
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 40px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        transition: transform 0.3s ease;
+
+        li {
+            list-style: none;
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+
+            a {
+                text-decoration: none;
+                color: map.get($color-general, "light");
+                transition: all 0.3s ease;
+                display: block;
+                padding: 1rem;
+
+                &:hover {
+                    color: map.get($color-general, "primary");
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    // Tablet styles
+    @media (max-width: map.get($breakpoints-layout, "tablet")) {
+        padding: 15px 30px;
+        position: relative; // Cambiado de fixed a relative
+        top: 0; // Eliminado el posicionamiento fijo
+        left: 0;
+        right: 0;
+        margin: 20px auto; // Añadido margen para separación
+
+        .menu-toggle {
+            display: block;
+        }
+
+        ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to bottom,
+                    color.adjust(map.get($color-general, "dark"), $lightness: -10%),
+                    color.adjust(map.get($color-general, "dark"), $lightness: -15%));
+            flex-direction: column;
+            gap: 0;
+            padding: 20px;
+            border-radius: 0 0 20px 20px;
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+
+            &.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            li {
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                a {
+                    padding: 15px;
+                    width: 100%;
+
+                    &:hover {
+                        background: color.adjust(map.get($color-general, "dark"), $lightness: -8%);
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // Mobile styles using mixin
+    @include movil {
+        padding: 10px 20px;
+        position: relative; // Cambiado de fixed a relative
+        top: 0; // Eliminado el posicionamiento fijo
+        left: 0;
+        right: 0;
+        margin: 20px auto; // Añadido margen para separación
+
+        .header-brand a {
+            font-size: 2rem;
+        }
+
+        ul {
+            padding: 15px;
+        }
+    }
+}
+
+// Desktop styles - Solo aquí aplicamos el posicionamiento fijo
+@media (min-width: map.get($breakpoints-layout, "desktop")) {
+    .header-container {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        padding: 25px 60px;
+
+        ul {
+            gap: 60px;
+        }
+    }
+}
+
+// Extra large screens
+@media (min-width: map.get($breakpoints-layout, "desktop-large")) {
+    .header-container {
+        padding: 30px 80px;
+
+        ul {
+            gap: 80px;
+        }
+    }
 }
 
 .logo-section {
