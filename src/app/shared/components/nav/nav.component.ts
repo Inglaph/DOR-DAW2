@@ -26,7 +26,7 @@ class NavigationItem {
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [ CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
@@ -36,11 +36,9 @@ export class NavComponent {
    * @Input links - Un array de objetos NavigationItem que representan los enlaces.
    */
   @Input() links: NavigationItem[] = [
-    new NavigationItem('Home', '/'),
-    new NavigationItem('About', '/about'),
-    new NavigationItem('Contact', '/contact'),
-    new NavigationItem('Services', '/services'),
-    new NavigationItem('Products', '/products'),
-    new NavigationItem('Blog', '/blog'),
+    new NavigationItem('Home', ''),
+    new NavigationItem('Proyectos', '/projects'),
+    new NavigationItem('Sobre mi', '/about'),
+    new NavigationItem('Contacto', '/contact'),
   ];
 }

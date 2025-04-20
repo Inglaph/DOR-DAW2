@@ -16,7 +16,7 @@
 
 .text-container {
     @include flexible-container(flex, column, nowrap, center, center, 20px, 20px);
-    width: 50%;
+    width: 30%;
 }
     .container {
     @include responsive-container(

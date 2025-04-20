@@ -1,6 +1,7 @@
-    <nav class="nav-container">
-        <ul>
-            <li *ngFor="let link of links">{{ link.label }}</li>
-        </ul>
-    </nav>
-
+<nav class="nav-container">
+    <ul>
+        <li *ngFor="let link of links">
+            <a [routerLink]="link.url">{{ link.label }}</a>
+        </li>
+    </ul>
+</nav>

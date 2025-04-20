@@ -1,6 +1,10 @@
 <section class="social-icons">
-    <a *ngFor="let social of socialMedia" [href]="social.url" [attr.aria-label]="social.name" target="_blank"
-        rel="noopener noreferrer" class="social-icon">
+    <a *ngFor="let social of socialMedia" 
+       [href]="social.url" 
+       [attr.aria-label]="social.name" 
+       target="_blank"
+       rel="noopener noreferrer" 
+       class="social-icon">
         <img [src]="social.icon" [alt]="social.name">
     </a>
 </section>

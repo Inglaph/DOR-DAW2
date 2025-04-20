@@ -4,7 +4,7 @@ import { HeroSectionComponent } from '../../shared/components/hero-section/hero-
 import { FooterComponent } from '../../shared/components/footer/footer.component';
 import { CardSectionComponent } from "./components/card-section/card-section.component";
 import { AplicationsSectionComponent } from "./components/aplications-section/aplications-section.component";
-
+import { ContactFormComponent } from "../../shared/components/contact-form/contact-form.component";
 
 @Component({
   selector: 'app-home',
@@ -14,7 +14,8 @@ import { AplicationsSectionComponent } from "./components/aplications-section/ap
     HeroSectionComponent,
     FooterComponent,
     CardSectionComponent,
-    AplicationsSectionComponent
+    AplicationsSectionComponent,
+    ContactFormComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

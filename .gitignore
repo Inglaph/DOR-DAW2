@@ -3,6 +3,9 @@ node_modules/
 .nodeenv/
 env/
 
+#pdf
+/assets/pdf/CV - Luis Alberto Posada Hoyos.pdf
+
 # Compiled output
 /dist
 /tmp

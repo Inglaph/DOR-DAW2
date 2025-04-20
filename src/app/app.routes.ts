@@ -38,6 +38,10 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/pruebas/pruebas.component').then(m => m.PruebasComponent)
     },
     {
+        path: 'projects',
+        redirectTo: '/#projects'
+    },
+    {
         path: '**',
         redirectTo: '', // Redirige a la página de inicio si la ruta no existe
         pathMatch: 'full'

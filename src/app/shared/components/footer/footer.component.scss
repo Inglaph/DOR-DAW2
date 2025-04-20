@@ -3,16 +3,11 @@
 @use 'sass:color';
 
 .footer {
-    background: linear-gradient(to bottom,
-            color.adjust(map.get($color-general, "dark"), $lightness: -10%),
-            color.adjust(map.get($color-general, "dark"), $lightness: -15%));
+    background: map.get($color-gradient, "background");
     color: map.get($color-general, "light");
     padding: 4rem 2rem;
     position: relative;
-    width: map.get($container-layout, "width");
-    padding: 0 20rem;
-
-
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,31 +28,36 @@
 }
 
 .footer-content {
-    @include flexible-container(flex,
-        row,
-        wrap,
-        space-between,
-        flex-start,
-        4rem,
-        2rem,
-        0 auto);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4rem;
     max-width: map.get($container-layout, "max-width");
     width: 100%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .footer-section {
     flex: 1;
-    min-width: 300px;
-    width: 33%;
-    max-width: 30%;
-    margin: 0 auto;
+    min-width: 250px;
+    max-width: 300px;
+
+    &.social-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        app-social-media {
+            width: 100%;
+            display: block;
+        }
+    }
 
     h3 {
         color: map.get($color-general, "primary");
@@ -105,25 +105,36 @@
         color: map.get($color-general, "light");
         font-size: 1.2rem;
         opacity: 0.8;
-        margin: 0px auto 10px auto;
+        margin: 0;
     }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+    .footer {
+        padding: 2rem 1rem;
+    }
+
     .footer-content {
-        @include flexible-container(flex,
-            column,
-            nowrap,
-            center,
-            center,
-            3rem,
-            1rem,
-            0 auto);
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        padding: 0;
     }
 
     .footer-section {
         text-align: center;
         max-width: 100%;
+        width: 100%;
+
+        &.social-media {
+            margin-top: 2rem;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }

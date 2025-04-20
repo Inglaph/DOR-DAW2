@@ -1,9 +1,15 @@
 @use 'stylesLap' as *;
 @use 'sass:map';
+@use 'sass:color';
+
+$color-gradient: (
+    "background": linear-gradient(to bottom,
+        color.adjust(map.get($color-general, "dark"), $lightness: -10%),
+        color.adjust(map.get($color-general, "dark"), $lightness: -15%)),
+);
 
 .nav-container {
-    @include responsive-container(
-        0 auto, // margin
+    @include responsive-container(0 auto, // margin
         20px 50px, // padding
         100%, // width
         100%, // max-width
@@ -11,7 +17,9 @@
 
     );
     display: flex;
-    background-color: map.get($color-general, "color-prueba");
+    background: linear-gradient(to bottom,
+            color.adjust(map.get($color-general, "dark"), $lightness: -10%),
+            color.adjust(map.get($color-general, "dark"), $lightness: -15%));
     border-radius: 20px;
 
     ul {
@@ -25,13 +33,19 @@
 
     li {
         list-style: none;
-        font-size: 2.2rem;
-        font-weight: 600;
+        font-size: 1.8rem;
+        font-weight: 500;
         letter-spacing: 0.1em;
 
     }
 
-    li:hover {
+    a {
+        text-decoration: none;
+        color: map.get($color-general, "light");
+    }
+
+    li:hover,
+    a:hover {
         color: map.get($color-general, "primary");
         transition: all 0.3s ease;
         cursor: pointer;

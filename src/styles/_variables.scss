@@ -1,5 +1,5 @@
 @use 'sass:map';
-
+@use 'sass:color';
 //---------------------------------
 //- Variables globales
 //---------------------------------
@@ -14,6 +14,18 @@ $color-general: (
     "header-background": rgba(21, 20, 20, 0.26),
     "color-prueba": #030814,
 );
+
+
+
+/// @group general
+/// @description Color de fondo del footer
+$color-gradient: (
+    "background": linear-gradient(to bottom,
+        color.adjust(map.get($color-general, "dark"), $lightness: -10%),
+        color.adjust(map.get($color-general, "dark"), $lightness: -15%)),
+);
+
+
 
 /// @group general
 /// @description Familia de fuentes y tamaño de la fuente

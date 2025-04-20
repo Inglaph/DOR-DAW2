@@ -1,0 +1,17 @@
+@use 'stylesLap' as *;
+@use 'sass:map';
+@use 'sass:color';
+
+.contact-section {
+    margin-top: map.get($container-layout, "margin-top") - 100px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: map.get($color-general, "primary");
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}

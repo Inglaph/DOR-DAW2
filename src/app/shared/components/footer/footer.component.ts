@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SocialMediaComponent } from '../social-media/social-media.component';
+
 @Component({
   selector: 'app-footer',
   standalone: true,
@@ -8,7 +9,8 @@ import { SocialMediaComponent } from '../social-media/social-media.component';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
-export class FooterComponent {
-  
-
+export class FooterComponent implements OnInit {
+  ngOnInit() {
+    console.log('FooterComponent initialized');
+  }
 }

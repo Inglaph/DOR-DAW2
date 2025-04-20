@@ -1,1 +1,69 @@
-<p>about works!</p>
+<app-header></app-header>
+<main class="main-about">
+    <div class="about-container">
+        <!-- Hero Section -->
+        <section class="hero-about">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img [src]="profile.image" [alt]="profile.name">
+                </div>
+                <div class="profile-info">
+                    <h1>{{ profile.name }}</h1>
+                    <h2>{{ profile.role }}</h2>
+                    <p class="description">{{ profile.description }}</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="content-wrapper">
+            <!-- Skills Section -->
+            <section class="skills-section">
+                <h3>Habilidades Principales</h3>
+                <div class="skills-container">
+                    <div class="skill-category" *ngFor="let skillGroup of profile.skills">
+                        <h4>{{ skillGroup.category }}</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item" *ngFor="let skill of skillGroup.items">
+                                <div class="skill-content">
+                                    <span>{{ skill }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="experience-section">
+                <h3>Experiencia Profesional</h3>
+                <div class="timeline">
+                    <div class="timeline-item" *ngFor="let exp of profile.experience">
+                        <div class="timeline-content">
+                            <h4>{{ exp.role }}</h4>
+                            <h5>{{ exp.company }}</h5>
+                            <span class="period">{{ exp.period }}</span>
+                            <p>{{ exp.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="education-section">
+                <h3>Formación Académica</h3>
+                <div class="education-grid">
+                    <div class="education-item" *ngFor="let edu of profile.education">
+                        <div class="education-content">
+                            <h4>{{ edu.title }}</h4>
+                            <h5>{{ edu.institution }}</h5>
+                            <span class="year">{{ edu.year }}</span>
+                            <p class="edu-description">{{ edu.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>
