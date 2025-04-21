@@ -2,6 +2,15 @@
 @use 'sass:map';
 @use 'sass:color';
 
+/// Sección de contacto que contiene el formulario
+/// @group Contacto
+/// @author IngLap
+/// @example scss
+///   .contact-section {
+///     @include flexible-container(flex, column, nowrap, space-around, center, 20px, 20px);
+///     width: 90%;
+///     margin: 0 auto;
+///   }
 .contact-section {
     @include flexible-container(flex, column, nowrap, space-around, center, 20px, 20px);
     width: 90%;
@@ -13,6 +22,18 @@
     }
 }
 
+/// Formulario de contacto
+/// @group Contacto
+/// @author IngLap
+/// @example scss
+///   .contact-form {
+///     width: 100%;
+///     display: flex;
+///     flex-direction: column;
+///     gap: 20px;
+///     padding: 20px;
+///     border-radius: 10px;
+///   }
 .contact-form {
     width: 100%;
     display: flex;

@@ -1,0 +1,666 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Frontend - v0.0.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Frontend - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="Release the docs!"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Frontend - 0.0.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="botones"><a href="#botones">botones</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="botones-variable"><a href="#botones-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="botones" data-name="buttons-color" data-type="variable"><a href="#botones-variable-buttons-color">buttons-color</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="buttons"><a href="#buttons">Buttons</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="buttons-mixin"><a href="#buttons-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="buttons" data-name="button-cta" data-type="mixin"><a href="#buttons-mixin-button-cta">button-cta</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="contacto"><a href="#contacto">contacto</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="contacto-css"><a href="#contacto-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="contacto" data-name=".contact-section" data-type="css"><a href="#contacto-css-.contact-section">.contact-section</a></li><li class="sidebar__item sassdoc__item" data-group="contacto" data-name=".contact-form" data-type="css"><a href="#contacto-css-.contact-form">.contact-form</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="container"><a href="#container">container</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="container-css"><a href="#container-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="container" data-name=".container" data-type="css"><a href="#container-css-.container">.container</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="general"><a href="#general">general</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="general-variable"><a href="#general-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="general" data-name="color-general" data-type="variable"><a href="#general-variable-color-general">color-general</a></li><li class="sidebar__item sassdoc__item" data-group="general" data-name="color-gradient" data-type="variable"><a href="#general-variable-color-gradient">color-gradient</a></li><li class="sidebar__item sassdoc__item" data-group="general" data-name="fonts-general" data-type="variable"><a href="#general-variable-fonts-general">fonts-general</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="general-css"><a href="#general-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="general" data-name="*" data-type="css"><a href="#general-css-*">*</a></li><li class="sidebar__item sassdoc__item" data-group="general" data-name="body" data-type="css"><a href="#general-css-body">body</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="header"><a href="#header">header</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="header-css"><a href="#header-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="header" data-name=".header-container" data-type="css"><a href="#header-css-.header-container">.header-container</a></li><li class="sidebar__item sassdoc__item" data-group="header" data-name=".logo-section" data-type="css"><a href="#header-css-.logo-section">.logo-section</a></li><li class="sidebar__item sassdoc__item" data-group="header" data-name=".logo-link" data-type="css"><a href="#header-css-.logo-link">.logo-link</a></li><li class="sidebar__item sassdoc__item" data-group="header" data-name=".logo-image" data-type="css"><a href="#header-css-.logo-image">.logo-image</a></li><li class="sidebar__item sassdoc__item" data-group="header" data-name=".logo-text" data-type="css"><a href="#header-css-.logo-text">.logo-text</a></li><li class="sidebar__item sassdoc__item" data-group="header" data-name=".nav" data-type="css"><a href="#header-css-.nav">.nav</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="hero"><a href="#hero">hero</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="hero-css"><a href="#hero-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="hero" data-name=".hero-section" data-type="css"><a href="#hero-css-.hero-section">.hero-section</a></li><li class="sidebar__item sassdoc__item" data-group="hero" data-name=".hero-section__content" data-type="css"><a href="#hero-css-.hero-section__content">.hero-section__content</a></li><li class="sidebar__item sassdoc__item" data-group="hero" data-name=".hero-section__text" data-type="css"><a href="#hero-css-.hero-section__text">.hero-section__text</a></li><li class="sidebar__item sassdoc__item" data-group="hero" data-name=".hero-section__title" data-type="css"><a href="#hero-css-.hero-section__title">.hero-section__title</a></li><li class="sidebar__item sassdoc__item" data-group="hero" data-name=".hero-section__cta" data-type="css"><a href="#hero-css-.hero-section__cta">.hero-section__cta</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="layout"><a href="#layout">Layout</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="layout-function"><a href="#layout-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="layout" data-name="anchura_col" data-type="function"><a href="#layout-function-anchura_col">anchura_col</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="layout-mixin"><a href="#layout-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="layout" data-name="flexible-container" data-type="mixin"><a href="#layout-mixin-flexible-container">flexible-container</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="flex-item" data-type="mixin"><a href="#layout-mixin-flex-item">flex-item</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="grid-container" data-type="mixin"><a href="#layout-mixin-grid-container">grid-container</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="grid-item" data-type="mixin"><a href="#layout-mixin-grid-item">grid-item</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="neo" data-type="mixin"><a href="#layout-mixin-neo">neo</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="gradient-line" data-type="mixin"><a href="#layout-mixin-gradient-line">gradient-line</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="movil" data-type="mixin"><a href="#layout-mixin-movil">movil</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="layout-variable"><a href="#layout-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="layout" data-name="container-layout" data-type="variable"><a href="#layout-variable-container-layout">container-layout</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="breakpoints-layout" data-type="variable"><a href="#layout-variable-breakpoints-layout">breakpoints-layout</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="links"><a href="#links">Links</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="links-mixin"><a href="#links-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="links" data-name="a-link" data-type="mixin"><a href="#links-mixin-a-link">a-link</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="links-variable"><a href="#links-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="links" data-name="color-link" data-type="variable"><a href="#links-variable-color-link">color-link</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="responsive"><a href="#responsive">Responsive</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="responsive-mixin"><a href="#responsive-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="responsive" data-name="responsive" data-type="mixin"><a href="#responsive-mixin-responsive">responsive</a></li><li class="sidebar__item sassdoc__item" data-group="responsive" data-name="responsive-container" data-type="mixin"><a href="#responsive-mixin-responsive-container">responsive-container</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="tablas"><a href="#tablas">tablas</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="tablas-function"><a href="#tablas-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="tablas" data-name="column-color" data-type="function"><a href="#tablas-function-column-color">column-color</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="tablas-variable"><a href="#tablas-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="tablas" data-name="colores-interlineado-tabla" data-type="variable"><a href="#tablas-variable-colores-interlineado-tabla">colores-interlineado-tabla</a></li><li class="sidebar__item sassdoc__item" data-group="tablas" data-name="interlineado-tabla" data-type="variable"><a href="#tablas-variable-interlineado-tabla">interlineado-tabla</a></li><li class="sidebar__item sassdoc__item" data-group="tablas" data-name="table-columns-rows" data-type="variable"><a href="#tablas-variable-table-columns-rows">table-columns-rows</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="text"><a href="#text">Text</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="text-mixin"><a href="#text-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="text" data-name="text-style" data-type="mixin"><a href="#text-mixin-text-style">text-style</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-css"><a href="#undefined-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".header-brand" data-type="css"><a href="#undefined-css-.header-brand">.header-brand</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".menu-toggle" data-type="css"><a href="#undefined-css-.menu-toggle">.menu-toggle</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="ul" data-type="css"><a href="#undefined-css-ul">ul</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="botones"><div class="container">botones</div></h1><section class="main__sub-section" id="botones-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="botones-variable-buttons-color"><h3 class="item__heading"><a class="item__name" href="#botones-variable-buttons-color">buttons-color</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$buttons-color: (
+    &quot;primario&quot;: #007bff,
+    &quot;secundario&quot;: #6c757d,
+    &quot;cta&quot;: #fff,
+    &quot;cta-hover&quot;: #0056b3,
+);</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="buttons"><div class="container">Buttons</div></h1><section class="main__sub-section" id="buttons-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="buttons-mixin-button-cta"><h3 class="item__heading"><a class="item__name" href="#buttons-mixin-button-cta">button-cta</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin button-cta($color, $hover, $active, $visited) { 
+    background: $background-color;
+    color: $color;
+    border: $border;
+    border-radius: $border-radius;
+    padding: $padding;
+    cursor: $cursor;
+    font-size: $font-size;
+    font-weight: $font-weight;
+ }" data-collapsed="@mixin button-cta($color, $hover, $active, $visited) { ... }"><code>@mixin button-cta($color, $hover, $active, $visited) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>Color del botón</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$hover</code></th><td data-label="desc"><p>Color del botón al pasar el mouse por encima</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$active</code></th><td data-label="desc"><p>Color del botón al hacer click</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$visited</code></th><td data-label="desc"><p>Color del botón después de haber sido visitado</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table></section></section></section><section class="main__section"><h1 class="main__heading" id="contacto"><div class="container">contacto</div></h1><section class="main__sub-section" id="contacto-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="contacto-css-.contact-section"><h3 class="item__heading"><a class="item__name" href="#contacto-css-.contact-section">.contact-section</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.contact-section {
+  @include flexible-container(flex, column, nowrap, space-around, center, 20px, 20px);
+    width: 90%;
+    margin: 0 auto;
+    margin-top: map.get($container-layout, &quot;margin-top&quot;)- 100px;
+
+    @include movil (map.get($breakpoints-layout, &quot;tablet&quot;)) {
+        margin-top: 0px;
+    }
+}</code>" data-collapsed=".contact-section { ... }"><code>.contact-section { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sección de contacto que contiene el formulario</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.contact-section {
+  @include flexible-container(flex, column, nowrap, space-around, center, 20px, 20px);
+  width: 90%;
+  margin: 0 auto;
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>IngLap</p></li></ul></section><section class="main__item container item" id="contacto-css-.contact-form"><h3 class="item__heading"><a class="item__name" href="#contacto-css-.contact-form">.contact-form</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.contact-form {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); // shadow de la caja
+}</code>" data-collapsed=".contact-form { ... }"><code>.contact-form { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Formulario de contacto</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>IngLap</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="container"><div class="container">container</div></h1><section class="main__sub-section" id="container-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="container-css-.container"><h3 class="item__heading"><a class="item__name" href="#container-css-.container">.container</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.container {
+  @include responsive-container(
+        0 auto, // margin
+        100px 50px, // padding
+        100%, // width
+        100%, // max-width
+        100%, // height
+    );
+}</code>" data-collapsed=".container { ... }"><code>.container { ... }</code></pre></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.container {
+  @include responsive-container(
+    0 auto,
+    100px 50px,
+    100%,
+    100%,
+    100%
+  );
+}</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="general"><div class="container">general</div></h1><section class="main__sub-section" id="general-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="general-variable-color-general"><h3 class="item__heading"><a class="item__name" href="#general-variable-color-general">color-general</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$color-general: (
+    &quot;primary&quot;: #007bff,
+    &quot;secondary&quot;: #6c757d,
+    &quot;dark&quot;: #121760,
+    &quot;light&quot;: #ffffff,
+    &quot;gray&quot;: #a7a0a0,
+    &quot;header-background&quot;: rgba(21, 20, 20, 0.26),
+    &quot;color-prueba&quot;: #030814,
+);</code></pre></div></section><section class="main__item container item" id="general-variable-color-gradient"><h3 class="item__heading"><a class="item__name" href="#general-variable-color-gradient">color-gradient</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$color-gradient: (
+    &quot;background&quot;: linear-gradient(to bottom,
+        color.adjust(map.get($color-general, &quot;dark&quot;), $lightness: -10%),
+        color.adjust(map.get($color-general, &quot;dark&quot;), $lightness: -15%)),
+);</code></pre></div></section><section class="main__item container item" id="general-variable-fonts-general"><h3 class="item__heading"><a class="item__name" href="#general-variable-fonts-general">fonts-general</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$fonts-general: (
+    &quot;principal&quot;: &#39;Poppins&#39;,
+    &quot;secundaria&quot;: &#39;Arial&#39;,
+    &quot;tamanio&quot;: 1.6rem,
+    &quot;color-texto&quot;: #333,
+);</code></pre></div></section></section><section class="main__sub-section" id="general-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="general-css-*"><h3 class="item__heading"><a class="item__name" href="#general-css-*">*</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>* {
+  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}</code>" data-collapsed="* { ... }"><code>* { ... }</code></pre></div></section><section class="main__item container item" id="general-css-body"><h3 class="item__heading"><a class="item__name" href="#general-css-body">body</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>body {
+  font-family: map.get($fonts-general, &quot;principal&quot;);
+    font-size: map.get($fonts-general, &quot;tamanio&quot;);
+    color: map.get($fonts-general, &quot;color-texto&quot;);
+}</code>" data-collapsed="body { ... }"><code>body { ... }</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="header"><div class="container">header</div></h1><section class="main__sub-section" id="header-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="header-css-.header-container"><h3 class="item__heading"><a class="item__name" href="#header-css-.header-container">.header-container</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.header-container {
+  @include responsive-container(0 auto,
+        20px 50px,
+        100%,
+        map.get($container-layout, &quot;max-width&quot;),
+        auto);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: map.get($color-general, &quot;header-background&quot;);
+    border-radius: 20px;
+    position: relative;
+    z-index: 1000;
+
+    /// Marca del header
+    /// @group Header
+    /// @example scss
+    ///   .header-brand {
+    ///     a {
+    ///       font-size: 2.4rem;
+    ///       font-weight: 700;
+    ///       color: map.get($color-general, &quot;light&quot;);
+    ///     }
+    ///   }
+    .header-brand {
+        a {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: map.get($color-general, &quot;light&quot;);
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &amp;:hover {
+                color: map.get($color-general, &quot;primary&quot;);
+            }
+        }
+    }
+
+    /// Botón de toggle del menú
+    /// @group Header
+    /// @example scss
+    ///   .menu-toggle {
+    ///     display: none;
+    ///     background: none;
+    ///     border: none;
+    ///     cursor: pointer;
+    ///   }
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        margin-left: auto;
+
+        .menu-icon {
+            width: 24px;
+            height: 24px;
+            color: map.get($color-general, &quot;light&quot;);
+            transition: transform 0.3s ease;
+        }
+
+        &amp;.active .menu-icon {
+            transform: rotate(90deg);
+        }
+    }
+
+    /// Navegación principal
+    /// @group Header
+    /// @example scss
+    ///   ul {
+    ///     display: flex;
+    ///     flex-direction: row;
+    ///     justify-content: flex-end;
+    ///     align-items: center;
+    ///     gap: 40px;
+    ///   }
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 40px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        transition: transform 0.3s ease;
+
+        li {
+            list-style: none;
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+
+            a {
+                text-decoration: none;
+                color: map.get($color-general, &quot;light&quot;);
+                transition: all 0.3s ease;
+                display: block;
+                padding: 1rem;
+
+                &amp;:hover {
+                    color: map.get($color-general, &quot;primary&quot;);
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    /// Estilos para tablet
+    /// @group Header
+    /// @example scss
+    ///   @media (max-width: map.get($breakpoints-layout, &quot;tablet&quot;)) {
+    ///     padding: 15px 30px;
+    ///     position: relative;
+    ///   }
+    @media (max-width: map.get($breakpoints-layout, &quot;tablet&quot;)) {
+        padding: 15px 30px;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: row-reverse;
+
+        .menu-toggle {
+            display: block;
+        }
+
+        ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to bottom,
+                    color.adjust(map.get($color-general, &quot;dark&quot;), $lightness: -10%),
+                    color.adjust(map.get($color-general, &quot;dark&quot;), $lightness: -15%));
+            flex-direction: column;
+            gap: 0;
+            padding: 20px;
+            border-radius: 0 0 20px 20px;
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+
+            &amp;.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+                flex-direction: row-reverse;
+            }
+
+            li {
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+                &amp;:last-child {
+                    border-bottom: none;
+                }
+
+                a {
+                    padding: 15px;
+                    width: 100%;
+
+                    &amp;:hover {
+                        background: color.adjust(map.get($color-general, &quot;dark&quot;), $lightness: -8%);
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+
+    /// Estilos para móvil
+    /// @group Header
+    /// @example scss
+    ///   @include movil {
+    ///     position: relative;
+    ///     top: 0;
+    ///   }
+    @include movil {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+
+        .header-brand a {
+            font-size: 2rem;
+        }
+
+        ul {
+            padding: 15px;
+        }
+    }
+}</code>" data-collapsed=".header-container { ... }"><code>.header-container { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Contenedor principal del header</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.header-container {
+  @include responsive-container(0 auto, 20px 50px, 100%, map.get($container-layout, &quot;max-width&quot;), auto);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>IngLap</p></li></ul></section><section class="main__item container item" id="header-css-.logo-section"><h3 class="item__heading"><a class="item__name" href="#header-css-.logo-section">.logo-section</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.logo-section {
+  $radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 25px;
+    position: relative;
+    transition: all 0.5s ease;
+    background: map.get($color-gradient, &quot;background&quot;);
+    border-radius: $radius;
+    filter: $filter-shadow;
+
+    &amp;:hover {
+        transform: scale(1.07);
+        transition: all 0.5s ease;
+        cursor: pointer;
+        box-shadow: 0 0 8px rgba(37, 198, 102, 0.6);
+
+        .logo-image {
+            filter: drop-shadow(0 0 8px rgba(198, 195, 37, 0.6));
+        }
+
+        .logo-text {
+            transition: all 0.5s ease;
+            color: lighten(map.get($color-general, &quot;primary&quot;), 20%);
+        }
+    }
+}</code>" data-collapsed=".logo-section { ... }"><code>.logo-section { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sección del logo</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 25px;
+}</code></pre></div></section><section class="main__item container item" id="header-css-.logo-link"><h3 class="item__heading"><a class="item__name" href="#header-css-.logo-link">.logo-link</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.logo-link {
+  display: flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+
+    &amp;:hover::after {
+        transform: scaleX(1);
+    }
+}</code>" data-collapsed=".logo-link { ... }"><code>.logo-link { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Enlace del logo</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}</code></pre></div></section><section class="main__item container item" id="header-css-.logo-image"><h3 class="item__heading"><a class="item__name" href="#header-css-.logo-image">.logo-image</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.logo-image {
+  max-width: 150px;
+    height: auto;
+    transition: filter 0.3s ease;
+    filter: drop-shadow(0 0 5px map.get($color-general, &quot;primary&quot;));
+}</code>" data-collapsed=".logo-image { ... }"><code>.logo-image { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Imagen del logo</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.logo-image {
+  max-width: 150px;
+  height: auto;
+}</code></pre></div></section><section class="main__item container item" id="header-css-.logo-text"><h3 class="item__heading"><a class="item__name" href="#header-css-.logo-text">.logo-text</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.logo-text {
+  color: map.get($color-general, &quot;light&quot;);
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}</code>" data-collapsed=".logo-text { ... }"><code>.logo-text { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Texto del logo</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.logo-text {
+  color: map.get($color-general, &quot;light&quot;);
+  font-size: 3rem;
+  font-weight: bold;
+}</code></pre></div></section><section class="main__item container item" id="header-css-.nav"><h3 class="item__heading"><a class="item__name" href="#header-css-.nav">.nav</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.nav {
+  filter: $filter-shadow;
+    display: flex;
+}</code>" data-collapsed=".nav { ... }"><code>.nav { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Navegación</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.nav {
+  filter: $filter-shadow;
+  display: flex;
+}</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="hero"><div class="container">hero</div></h1><section class="main__sub-section" id="hero-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="hero-css-.hero-section"><h3 class="item__heading"><a class="item__name" href="#hero-css-.hero-section">.hero-section</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.hero-section {
+  width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #fff;
+    padding-top: 250px;
+
+    ::before {
+        content: &quot;&quot;;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.49) 0%, #0000008c 100%), url(&#39;../../../../assets/images/hero/hero-image.png&#39;); // Fondo de la imagen con gradiente y imagen de fondo 
+        background-position: center; //centra la imagen
+        background-size: cover; //cubre el tamaño de la imagen
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+        z-index: -1;
+    }
+
+    @include movil(map.get($breakpoints-layout, &quot;tablet&quot;)) {
+        padding-top: 0%;
+    }
+}</code>" data-collapsed=".hero-section { ... }"><code>.hero-section { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sección hero principal de la aplicación</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.hero-section {
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 800px;
+  position: relative;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>IngLap</p></li></ul></section><section class="main__item container item" id="hero-css-.hero-section__content"><h3 class="item__heading"><a class="item__name" href="#hero-css-.hero-section__content">.hero-section__content</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.hero-section__content {
+  @include responsive-container(0 auto,
+        0,
+    );
+    z-index: 2;
+}</code>" data-collapsed=".hero-section__content { ... }"><code>.hero-section__content { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Contenedor del contenido del hero</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.hero-section__content {
+  @include responsive-container(0 auto, 0);
+  z-index: 2;
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>IngLap</p></li></ul></section><section class="main__item container item" id="hero-css-.hero-section__text"><h3 class="item__heading"><a class="item__name" href="#hero-css-.hero-section__text">.hero-section__text</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.hero-section__text {
+  color: #ffffff;
+    text-align: center;
+    margin-top: 100px;
+}</code>" data-collapsed=".hero-section__text { ... }"><code>.hero-section__text { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Texto principal del hero</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.hero-section__text {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 100px;
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>IngLap</p></li></ul></section><section class="main__item container item" id="hero-css-.hero-section__title"><h3 class="item__heading"><a class="item__name" href="#hero-css-.hero-section__title">.hero-section__title</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.hero-section__title {
+  font-size: 40px;
+}</code>" data-collapsed=".hero-section__title { ... }"><code>.hero-section__title { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Título del hero</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.hero-section__title {
+  font-size: 40px;
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>IngLap</p></li></ul></section><section class="main__item container item" id="hero-css-.hero-section__cta"><h3 class="item__heading"><a class="item__name" href="#hero-css-.hero-section__cta">.hero-section__cta</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.hero-section__cta {
+  display: inline-block;
+    margin-top: 50px;
+    @include button-cta(map.get($buttons-cta, &quot;color&quot;),
+        map.get($buttons-cta, &quot;border&quot;),
+        map.get($buttons-cta, &quot;border-radius&quot;),
+        map.get($buttons-cta, &quot;padding&quot;),
+        map.get($buttons-cta, &quot;cursor&quot;),
+        map.get($buttons-cta, &quot;font-size&quot;),
+        map.get($buttons-cta, &quot;font-weight&quot;),
+        map.get($buttons-cta, &quot;text-transform&quot;),
+        map.get($buttons-cta, &quot;transition&quot;),
+        map.get($buttons-cta, &quot;background-color&quot;),
+    );
+    transition: map.get($buttons-cta, &quot;transition&quot;);
+
+    &amp;:hover {
+        background-color: map.get($buttons-cta, &quot;hover&quot;);
+    }
+}</code>" data-collapsed=".hero-section__cta { ... }"><code>.hero-section__cta { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Botón de llamada a la acción del hero</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.hero-section__cta {
+  display: inline-block;
+  margin-top: 50px;
+  @include button-cta(map.get($buttons-cta, &quot;color&quot;),
+    map.get($buttons-cta, &quot;border&quot;),
+    map.get($buttons-cta, &quot;border-radius&quot;),
+    map.get($buttons-cta, &quot;padding&quot;),
+    map.get($buttons-cta, &quot;cursor&quot;),
+    map.get($buttons-cta, &quot;font-size&quot;),
+    map.get($buttons-cta, &quot;font-weight&quot;),
+    map.get($buttons-cta, &quot;text-transform&quot;),
+    map.get($buttons-cta, &quot;transition&quot;),
+    map.get($buttons-cta, &quot;background-color&quot;));
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>IngLap</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="layout"><div class="container">Layout</div></h1><section class="main__sub-section" id="layout-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="layout-function-anchura_col"><h3 class="item__heading"><a class="item__name" href="#layout-function-anchura_col">anchura_col</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function anchura_col($i) { 
+    @return (100 / $num_elementos)*$i;
+ }" data-collapsed="@function anchura_col($i) { ... }"><code>@function anchura_col($i) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Función que devuelve la anchura correspondiente al elemento de la maquetación</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$i</code></th><td data-label="desc"><p>Número de casillas en el alcho de la fila que va a ocupar</p></td><td data-label="type"><code>Integer</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Integer</code> &mdash;<p>El porcentaje (sin el símbolo %, del ancho que le corresponde al elemento</p></div></section></section><section class="main__sub-section" id="layout-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="layout-mixin-flexible-container"><h3 class="item__heading"><a class="item__name" href="#layout-mixin-flexible-container">flexible-container</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin flexible-container($dis, $direccion, $corte, $just, $align, $gap, $padding, $margin) { 
+    display: $dis;
+    flex-flow: $direccion $corte;
+    justify-content: $just;
+    align-items: $align;
+    gap: $gap;
+    width: map.get($container-layout, &quot;width&quot;);
+    padding: $padding;
+    margin-top: $margin;
+    margin-bottom: $margin;
+
+    @media (max-width: 768px) {
+        //tablet
+        flex-flow: $direccion $corte;
+        justify-content: $just;
+        align-items: $align;
+    }
+
+    @media (max-width: 480px) {
+        //movil
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: map.get($container-layout, &quot;width-mobile&quot;);
+        padding: 10px;
+    }
+ }" data-collapsed="@mixin flexible-container($dis, $direccion, $corte, $just, $align, $gap, $padding, $margin) { ... }"><code>@mixin flexible-container($dis, $direccion, $corte, $just, $align, $gap, $padding, $margin) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$dis</code></th><td data-label="desc"><p>Tipo de display (ej. flex, block)</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$direccion</code></th><td data-label="desc"><p>Dirección del flujo (ej. row, column)</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$corte</code></th><td data-label="desc"><p>Tipo de corte (ej. nowrap, wrap)</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$just</code></th><td data-label="desc"><p>Alineación en el eje principal (ej. center, space-between)</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$align</code></th><td data-label="desc"><p>Alineación en el eje transversal (ej. center, stretch)</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$gap</code></th><td data-label="desc"><p>Espacio entre los elementos flexibles</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$padding</code></th><td data-label="desc"><p>Espacio interno (padding) por defecto 0</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$margin</code></th><td data-label="desc"><p>Espacio externo (margin) por defecto 0</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#layout-variable-container-layout"><code>container-layout</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#layout-variable-container-layout"><code>container-layout</code></a></li></ul></section><section class="main__item container item" id="layout-mixin-flex-item"><h3 class="item__heading"><a class="item__name" href="#layout-mixin-flex-item">flex-item</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin flex-item($width, $height, $padding, $margin) { 
+    display: block;
+    width: $width;
+    height: $height;
+    padding: $padding;
+    margin: $margin;
+ }" data-collapsed="@mixin flex-item($width, $height, $padding, $margin) { ... }"><code>@mixin flex-item($width, $height, $padding, $margin) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc"><p>Ancho del elemento</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$height</code></th><td data-label="desc"><p>Alto del elemento</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$padding</code></th><td data-label="desc"><p>Espacio interno (padding) por defecto 0</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$margin</code></th><td data-label="desc"><p>Espacio externo (margin) por defecto 0</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code></code></pre></div></section><section class="main__item container item" id="layout-mixin-grid-container"><h3 class="item__heading"><a class="item__name" href="#layout-mixin-grid-container">grid-container</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin grid-container($columnas, $gap) { 
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $gap;
+
+    @media (max-width: 768px) {
+        //tablet
+        grid-template-columns: 1fr;
+        gap: 0em;
+    }
+
+    @media (max-width: 480px) {
+        //movil
+        grid-template-columns: 1fr;
+        gap: 0em;
+    }
+ }" data-collapsed="@mixin grid-container($columnas, $gap) { ... }"><code>@mixin grid-container($columnas, $gap) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$columnas</code></th><td data-label="desc"><p>Número de columnas</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$gap</code></th><td data-label="desc"><p>Espacio entre los elementos de la grid</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table></section><section class="main__item container item" id="layout-mixin-grid-item"><h3 class="item__heading"><a class="item__name" href="#layout-mixin-grid-item">grid-item</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin grid-item($width, $height) { 
+    display: grid;
+    grid-template-columns: $width;
+    grid-template-rows: $height;
+ }" data-collapsed="@mixin grid-item($width, $height) { ... }"><code>@mixin grid-item($width, $height) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc"><p>Ancho del elemento</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$height</code></th><td data-label="desc"><p>Alto del elemento</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table></section><section class="main__item container item" id="layout-mixin-neo"><h3 class="item__heading"><a class="item__name" href="#layout-mixin-neo">neo</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin neo($radius, $eje, $color, $color-shadow1, $color-shadow2) { 
+    border-radius: $radius;
+    background: $color;
+    box-shadow:
+        if($eje ==&#39;y&#39;,
+            0 -5px 15px $color-shadow1,
+            5px 0 15px $color-shadow1 ),
+        if($eje ==&#39;y&#39;,
+            0 5px 15px $color-shadow2,
+            -5px 0 15px $color-shadow2 );
+ }" data-collapsed="@mixin neo($radius, $eje, $color, $color-shadow1, $color-shadow2) { ... }"><code>@mixin neo($radius, $eje, $color, $color-shadow1, $color-shadow2) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$radius</code></th><td data-label="desc"><p>Radio del elemento</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$eje</code></th><td data-label="desc"><p>Eje del elemento</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>Color del elemento</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color-shadow1</code></th><td data-label="desc"><p>Color del sombra 1</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color-shadow2</code></th><td data-label="desc"><p>Color del sombra 2</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table></section><section class="main__item container item" id="layout-mixin-gradient-line"><h3 class="item__heading"><a class="item__name" href="#layout-mixin-gradient-line">gradient-line</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin gradient-line($color1, $color2, $height, $offset, $width) { 
+    &amp;::after {
+        content: &#39;&#39;;
+        position: absolute;
+        bottom: $offset;
+        left: 0;
+        width: $width;
+        height: $height;
+        background: linear-gradient(90deg,
+                $color1 0%,
+                $color2 100%);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+ }" data-collapsed="@mixin gradient-line($color1, $color2, $height, $offset, $width) { ... }"><code>@mixin gradient-line($color1, $color2, $height, $offset, $width) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$color1</code></th><td data-label="desc"><p>Color del gradient-line 1</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color2</code></th><td data-label="desc"><p>Color del gradient-line 2</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$height</code></th><td data-label="desc"><p>Alto del gradient-line</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$offset</code></th><td data-label="desc"><p>Desplazamiento del gradient-line</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc"><p>Ancho del gradient-line</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code></code></pre></div></section><section class="main__item container item" id="layout-mixin-movil"><h3 class="item__heading"><a class="item__name" href="#layout-mixin-movil">movil</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin movil($width) { 
+    @media (max-width: $width) {
+        @content;
+    }
+ }" data-collapsed="@mixin movil($width) { ... }"><code>@mixin movil($width) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc"><p>Ancho del contenedor</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code></code></pre></div></section></section><section class="main__sub-section" id="layout-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="layout-variable-container-layout"><h3 class="item__heading"><a class="item__name" href="#layout-variable-container-layout">container-layout</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$container-layout: (&quot;padding&quot;: 100px 0,
+    &quot;margin&quot;: 20px,
+    &quot;width&quot;: 100%, // Ancho total de la página
+    &quot;max-width&quot;: 1600px, // Ancho máximo del contenedor
+    &quot;width-mobile&quot;: 100%,
+    &quot;width-tablet&quot;: 100%,
+    &quot;width-desktop&quot;: 1200px,
+    &quot;width-desktop-large&quot;: 1400px,
+    &quot;margin-top&quot;: 300px,
+);</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-flexible-container"><code>flexible-container</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-flexible-container"><code>flexible-container</code></a></li></ul></section><section class="main__item container item" id="layout-variable-breakpoints-layout"><h3 class="item__heading"><a class="item__name" href="#layout-variable-breakpoints-layout">breakpoints-layout</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$breakpoints-layout: (
+    &quot;movil&quot;: 480px,
+    &quot;tablet&quot;: 900px,
+    &quot;desktop&quot;: 1024px,
+    &quot;desktop-large&quot;: 1440px,
+);</code></pre></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code></code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="links"><div class="container">Links</div></h1><section class="main__sub-section" id="links-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="links-mixin-a-link"><h3 class="item__heading"><a class="item__name" href="#links-mixin-a-link">a-link</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin a-link($color, $hover, $active, $visited) { 
+    text-decoration: none;
+    color: $color;
+
+    &amp;:hover {
+        color: $hover;
+    }
+
+    &amp;:active {
+        color: $active;
+    }
+
+    &amp;:visited {
+        color: $visited;
+    }
+
+ }" data-collapsed="@mixin a-link($color, $hover, $active, $visited) { ... }"><code>@mixin a-link($color, $hover, $active, $visited) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>Color del enlace por defecto #333333</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$hover</code></th><td data-label="desc"><p>Color del enlace al pasar el mouse por encima por defecto #007BFF</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$active</code></th><td data-label="desc"><p>Color del enlace al hacer click por defecto #0056b3</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$visited</code></th><td data-label="desc"><p>Color del enlace después de haber sido visitado por defecto #6c757d</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table></section></section><section class="main__sub-section" id="links-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="links-variable-color-link"><h3 class="item__heading"><a class="item__name" href="#links-variable-color-link">color-link</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$color-link: #007bff;</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="responsive"><div class="container">Responsive</div></h1><section class="main__sub-section" id="responsive-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="responsive-mixin-responsive"><h3 class="item__heading"><a class="item__name" href="#responsive-mixin-responsive">responsive</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin responsive($media, $content) { 
+    @media (max-width: $media) {
+        @content;
+    }
+ }" data-collapsed="@mixin responsive($media, $content) { ... }"><code>@mixin responsive($media, $content) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$media</code></th><td data-label="desc"><p>Media query</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$content</code></th><td data-label="desc"><p>Contenido del elemento</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table></section><section class="main__item container item" id="responsive-mixin-responsive-container"><h3 class="item__heading"><a class="item__name" href="#responsive-mixin-responsive-container">responsive-container</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin responsive-container($margin, $padding, $width, $height, $width-mobile, $height-mobile, $width-tablet, $height-tablet, $width-desktop, $height-desktop) { 
+    margin: $margin;
+    padding: $padding;
+    width: $width;
+    max-width: $max-width;
+    height: $height;
+
+    @media (max-width: 768px) {
+        //tablet
+        width: $width-tablet;
+        height: $height-tablet;
+    }
+
+    @media (max-width: 480px) {
+        //movil
+        width: $width-mobile;
+        height: $height-mobile;
+    }
+ }" data-collapsed="@mixin responsive-container($margin, $padding, $width, $height, $width-mobile, $height-mobile, $width-tablet, $height-tablet, $width-desktop, $height-desktop) { ... }"><code>@mixin responsive-container($margin, $padding, $width, $height, $width-mobile, $height-mobile, $width-tablet, $height-tablet, $width-desktop, $height-desktop) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$margin</code></th><td data-label="desc"><p>Margen del contenedor</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$padding</code></th><td data-label="desc"><p>Padding del contenedor</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc"><p>Ancho del contenedor</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$height</code></th><td data-label="desc"><p>Alto del contenedor</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$width-mobile</code></th><td data-label="desc"><p>Ancho del contenedor en mobile</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$height-mobile</code></th><td data-label="desc"><p>Alto del contenedor en mobile</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$width-tablet</code></th><td data-label="desc"><p>Ancho del contenedor en tablet</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$height-tablet</code></th><td data-label="desc"><p>Alto del contenedor en tablet</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$width-desktop</code></th><td data-label="desc"><p>Ancho del contenedor en desktop</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$height-desktop</code></th><td data-label="desc"><p>Alto del contenedor en desktop</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code></code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="tablas"><div class="container">tablas</div></h1><section class="main__sub-section" id="tablas-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="tablas-function-column-color"><h3 class="item__heading"><a class="item__name" href="#tablas-function-column-color">column-color</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function column-color($col-number) { 
+    @if ($col-num % 2==0) {
+        @return map.get($colores-interlineado-tabla, &quot;par&quot;);
+    }
+
+    @else {
+        @return map.get($colores-interlineado-tabla, &quot;impar&quot;);
+    }
+ }" data-collapsed="@function column-color($col-number) { ... }"><code>@function column-color($col-number) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Función que me devuelve el color de fondo de las columnas dependiendo de si es par o impar</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$col-number</code></th><td data-label="desc"><p>Número de la columna</p></td><td data-label="type"><code>Integer</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Color</code></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#tablas-variable-colores-interlineado-tabla"><code>colores-interlineado-tabla</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#tablas-variable-colores-interlineado-tabla"><code>colores-interlineado-tabla</code></a></li></ul></section></section><section class="main__sub-section" id="tablas-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="tablas-variable-colores-interlineado-tabla"><h3 class="item__heading"><a class="item__name" href="#tablas-variable-colores-interlineado-tabla">colores-interlineado-tabla</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$colores-interlineado-tabla: (&quot;par&quot;: #fccccc,
+    &quot;impar&quot;: #d9cece,
+);</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#tablas-function-column-color"><code>column-color</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#tablas-function-column-color"><code>column-color</code></a></li></ul></section><section class="main__item container item" id="tablas-variable-interlineado-tabla"><h3 class="item__heading"><a class="item__name" href="#tablas-variable-interlineado-tabla">interlineado-tabla</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$interlineado-tabla: (&quot;par&quot;: 1.5,
+    &quot;impar&quot;: 1.5,
+);</code></pre></div></section><section class="main__item container item" id="tablas-variable-table-columns-rows"><h3 class="item__heading"><a class="item__name" href="#tablas-variable-table-columns-rows">table-columns-rows</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$table-columns-rows: (
+    &quot;columnas&quot;: 12,
+    &quot;filas&quot;: 12,
+);</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="text"><div class="container">Text</div></h1><section class="main__sub-section" id="text-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="text-mixin-text-style"><h3 class="item__heading"><a class="item__name" href="#text-mixin-text-style">text-style</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin text-style($font-size, $font-weight, $color, $text-align, $text-transform, $text-decoration, $text-shadow, $text-transform) { 
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    text-align: $text-align;
+    text-transform: $text-transform;
+    text-decoration: $text-decoration;
+    text-shadow: $text-shadow;
+ }" data-collapsed="@mixin text-style($font-size, $font-weight, $color, $text-align, $text-transform, $text-decoration, $text-shadow, $text-transform) { ... }"><code>@mixin text-style($font-size, $font-weight, $color, $text-align, $text-transform, $text-decoration, $text-shadow, $text-transform) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$font-size</code></th><td data-label="desc"><p>Tamaño de la fuente</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$font-weight</code></th><td data-label="desc"><p>Peso de la fuente</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>Color del texto</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$text-align</code></th><td data-label="desc"><p>Alineación del texto</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$text-transform</code></th><td data-label="desc"><p>Transformación del texto</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$text-decoration</code></th><td data-label="desc"><p>Decoración del texto</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$text-shadow</code></th><td data-label="desc"><p>Sombra del texto</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$text-transform</code></th><td data-label="desc"><p>Transformación del texto</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code></code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="undefined-css-.header-brand"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.header-brand">.header-brand</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.header-brand {
+  a {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: map.get($color-general, &quot;light&quot;);
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &amp;:hover {
+                color: map.get($color-general, &quot;primary&quot;);
+            }
+        }
+}</code>" data-collapsed=".header-brand { ... }"><code>.header-brand { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Marca del header @group Header @example scss .header-brand { a { font-size: 2.4rem; font-weight: 700; color: map.get($color-general, &quot;light&quot;); } }</p></div></section><section class="main__item container item" id="undefined-css-.menu-toggle"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.menu-toggle">.menu-toggle</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.menu-toggle {
+  display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        margin-left: auto;
+
+        .menu-icon {
+            width: 24px;
+            height: 24px;
+            color: map.get($color-general, &quot;light&quot;);
+            transition: transform 0.3s ease;
+        }
+
+        &amp;.active .menu-icon {
+            transform: rotate(90deg);
+        }
+}</code>" data-collapsed=".menu-toggle { ... }"><code>.menu-toggle { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Botón de toggle del menú @group Header @example scss .menu-toggle { display: none; background: none; border: none; cursor: pointer; }</p></div></section><section class="main__item container item" id="undefined-css-ul"><h3 class="item__heading"><a class="item__name" href="#undefined-css-ul">ul</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>ul {
+  display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 40px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        transition: transform 0.3s ease;
+
+        li {
+            list-style: none;
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+
+            a {
+                text-decoration: none;
+                color: map.get($color-general, &quot;light&quot;);
+                transition: all 0.3s ease;
+                display: block;
+                padding: 1rem;
+
+                &amp;:hover {
+                    color: map.get($color-general, &quot;primary&quot;);
+                    transform: scale(1.1);
+                }
+            }
+        }
+}</code>" data-collapsed="ul { ... }"><code>ul { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Navegación principal @group Header @example scss ul { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; gap: 40px; }</p></div></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">Frontend</span><!-- Version --> <span class="project-info__version">- v0.0.0</span><!-- License --></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

@@ -1,6 +1,19 @@
 @use 'sass:map';
 @use 'stylesLap' as *;
 
+/// Sección hero principal de la aplicación
+/// @group Hero
+/// @author IngLap
+/// @example scss
+///   .hero-section {
+///     width: 100%;
+///     height: 100vh;
+///     min-height: 600px;
+///     max-height: 800px;
+///     position: relative;
+///     display: grid;
+///     grid-template-rows: 100px 1fr;
+///   }
 .hero-section {
     width: 100%;
     height: 100vh;
@@ -29,10 +42,16 @@
     @include movil(map.get($breakpoints-layout, "tablet")) {
         padding-top: 0%;
     }
-
-
 }
 
+/// Contenedor del contenido del hero
+/// @group Hero
+/// @author IngLap
+/// @example scss
+///   .hero-section__content {
+///     @include responsive-container(0 auto, 0);
+///     z-index: 2;
+///   }
 .hero-section__content {
     @include responsive-container(0 auto,
         0,
@@ -40,16 +59,50 @@
     z-index: 2;
 }
 
+/// Texto principal del hero
+/// @group Hero
+/// @author IngLap
+/// @example scss
+///   .hero-section__text {
+///     color: #ffffff;
+///     text-align: center;
+///     margin-top: 100px;
+///   }
 .hero-section__text {
     color: #ffffff;
     text-align: center;
     margin-top: 100px;
 }
 
+/// Título del hero
+/// @group Hero
+/// @author IngLap
+/// @example scss
+///   .hero-section__title {
+///     font-size: 40px;
+///   }
 .hero-section__title {
     font-size: 40px;
 }
 
+/// Botón de llamada a la acción del hero
+/// @group Hero
+/// @author IngLap
+/// @example scss
+///   .hero-section__cta {
+///     display: inline-block;
+///     margin-top: 50px;
+///     @include button-cta(map.get($buttons-cta, "color"),
+///       map.get($buttons-cta, "border"),
+///       map.get($buttons-cta, "border-radius"),
+///       map.get($buttons-cta, "padding"),
+///       map.get($buttons-cta, "cursor"),
+///       map.get($buttons-cta, "font-size"),
+///       map.get($buttons-cta, "font-weight"),
+///       map.get($buttons-cta, "text-transform"),
+///       map.get($buttons-cta, "transition"),
+///       map.get($buttons-cta, "background-color"));
+///   }
 .hero-section__cta {
     display: inline-block;
     margin-top: 50px;

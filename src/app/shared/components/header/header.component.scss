@@ -4,6 +4,16 @@
 
 $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
 
+/// Contenedor principal del header
+/// @group Header
+/// @author IngLap
+/// @example scss
+///   .header-container {
+///     @include responsive-container(0 auto, 20px 50px, 100%, map.get($container-layout, "max-width"), auto);
+///     display: flex;
+///     justify-content: space-between;
+///     align-items: center;
+///   }
 .header-container {
     @include responsive-container(0 auto,
         20px 50px,
@@ -18,6 +28,16 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
     position: relative;
     z-index: 1000;
 
+    /// Marca del header
+    /// @group Header
+    /// @example scss
+    ///   .header-brand {
+    ///     a {
+    ///       font-size: 2.4rem;
+    ///       font-weight: 700;
+    ///       color: map.get($color-general, "light");
+    ///     }
+    ///   }
     .header-brand {
         a {
             font-size: 2.4rem;
@@ -32,6 +52,15 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
         }
     }
 
+    /// Botón de toggle del menú
+    /// @group Header
+    /// @example scss
+    ///   .menu-toggle {
+    ///     display: none;
+    ///     background: none;
+    ///     border: none;
+    ///     cursor: pointer;
+    ///   }
     .menu-toggle {
         display: none;
         background: none;
@@ -52,6 +81,16 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
         }
     }
 
+    /// Navegación principal
+    /// @group Header
+    /// @example scss
+    ///   ul {
+    ///     display: flex;
+    ///     flex-direction: row;
+    ///     justify-content: flex-end;
+    ///     align-items: center;
+    ///     gap: 40px;
+    ///   }
     ul {
         display: flex;
         flex-direction: row;
@@ -85,14 +124,20 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
         }
     }
 
-    // Tablet styles
+    /// Estilos para tablet
+    /// @group Header
+    /// @example scss
+    ///   @media (max-width: map.get($breakpoints-layout, "tablet")) {
+    ///     padding: 15px 30px;
+    ///     position: relative;
+    ///   }
     @media (max-width: map.get($breakpoints-layout, "tablet")) {
         padding: 15px 30px;
-        position: relative; // Cambiado de fixed a relative
-        top: 0; // Eliminado el posicionamiento fijo
+        position: relative;
+        top: 0;
         left: 0;
         right: 0;
-        margin: 20px auto; // Añadido margen para separación
+        margin: 20px auto;
         display: flex;
         flex-direction: row-reverse;
 
@@ -146,13 +191,19 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
         }
     }
 
-    // Mobile styles using mixin
+    /// Estilos para móvil
+    /// @group Header
+    /// @example scss
+    ///   @include movil {
+    ///     position: relative;
+    ///     top: 0;
+    ///   }
     @include movil {
-        position: relative; // Cambiado de fixed a relative
-        top: 0; // Eliminado el posicionamiento fijo
+        position: relative;
+        top: 0;
         left: 0;
         right: 0;
-        margin: 20px auto; // Añadido margen para separación
+        margin: 20px auto;
         display: flex;
         flex-direction: column;
         margin-top: 10px;
@@ -167,7 +218,15 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
     }
 }
 
-// Desktop styles - Solo aquí aplicamos el posicionamiento fijo
+/// Estilos para desktop
+/// @group Header
+/// @example scss
+///   @media (min-width: map.get($breakpoints-layout, "desktop")) {
+///     .header-container {
+///       position: fixed;
+///       top: 20px;
+///     }
+///   }
 @media (min-width: map.get($breakpoints-layout, "desktop")) {
     .header-container {
         position: fixed;
@@ -183,7 +242,14 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
     }
 }
 
-// Extra large screens
+/// Estilos para pantallas extra grandes
+/// @group Header
+/// @example scss
+///   @media (min-width: map.get($breakpoints-layout, "desktop-large")) {
+///     .header-container {
+///       padding: 30px 80px;
+///     }
+///   }
 @media (min-width: map.get($breakpoints-layout, "desktop-large")) {
     .header-container {
         padding: 30px 80px;
@@ -194,20 +260,27 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
     }
 }
 
+/// Sección del logo
+/// @group Header
+/// @example scss
+///   .logo-section {
+///     display: flex;
+///     align-items: center;
+///     justify-content: center;
+///     padding: 0px 25px;
+///   }
 .logo-section {
     $radius: 30px;
-    // outline: 0.5px solid rgb(255, 250, 250, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0px 25px;
     position: relative;
     transition: all 0.5s ease;
-    background: map.get($color-gradient, "background"); // Fondo blanco semitransparente
+    background: map.get($color-gradient, "background");
     border-radius: $radius;
-    filter: $filter-shadow; // Filtro de sombra
+    filter: $filter-shadow;
 
-    // Efecto de hover
     &:hover {
         transform: scale(1.07);
         transition: all 0.5s ease;
@@ -225,34 +298,62 @@ $filter-shadow: drop-shadow(0 0 10px rgba(134, 167, 150, 0.6));
     }
 }
 
+/// Enlace del logo
+/// @group Header
+/// @example scss
+///   .logo-link {
+///     display: flex;
+///     align-items: center;
+///     text-decoration: none;
+///   }
 .logo-link {
     display: flex;
     align-items: center;
     text-decoration: none;
     position: relative;
 
-    // @include gradient-line(map.get($color-general, "primary"), map.get($color-general, "secondary"));
     &:hover::after {
         transform: scaleX(1);
     }
 }
 
+/// Imagen del logo
+/// @group Header
+/// @example scss
+///   .logo-image {
+///     max-width: 150px;
+///     height: auto;
+///   }
 .logo-image {
     max-width: 150px;
     height: auto;
-    transition: filter 0.3s ease; // Transición suave para el efecto de hover
-    filter: drop-shadow(0 0 5px map.get($color-general, "primary")); // Sombra primaria
+    transition: filter 0.3s ease;
+    filter: drop-shadow(0 0 5px map.get($color-general, "primary"));
 }
 
+/// Texto del logo
+/// @group Header
+/// @example scss
+///   .logo-text {
+///     color: map.get($color-general, "light");
+///     font-size: 3rem;
+///     font-weight: bold;
+///   }
 .logo-text {
     color: map.get($color-general, "light");
     font-size: 3rem;
     font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); // Sombra sutil para profundidad
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
+/// Navegación
+/// @group Header
+/// @example scss
+///   .nav {
+///     filter: $filter-shadow;
+///     display: flex;
+///   }
 .nav {
-    // outline: 1px solid red;
     filter: $filter-shadow;
     display: flex;
 }

@@ -1,0 +1,23 @@
+{
+    "dest": "docs/sass",
+    "theme": "default",
+    "display": {
+        "access": [
+            "public",
+            "private"
+        ],
+        "alias": true,
+        "watermark": true
+    },
+    "groups": {
+        "Variables": "Variables",
+        "Mixins": "Mixins",
+        "Functions": "Functions",
+        "Layout": "Layout",
+        "Buttons": "Buttons",
+        "Links": "Links",
+        "Text": "Text",
+        "Responsive": "Responsive",
+        "Tables": "Tables"
+    }
+}
